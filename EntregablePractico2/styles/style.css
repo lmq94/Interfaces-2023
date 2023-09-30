@@ -101,7 +101,8 @@ input::placeholder{
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #43434E ;
+    background-color: var(--colorSecundarioLuz3);
+    height: 50px;
 }
 
 .navbar-left {
@@ -119,16 +120,39 @@ input::placeholder{
     display: inline-block;
 }
 
-input[type="text"] {
-    padding: 5px 30px 5px 10px;
+/* Estilo para el input de búsqueda */
+.search-input {
+    padding: 5px 30px 5px 35px; 
     border: none;
     border-radius: 20px;
     width: 200px;
 }
 
-input[type="text"]::placeholder {
-    color: #ccc;
+.search-input::placeholder {
+    color: var(--colorBlancos);
 }
+
+/* Estilo para el icono de búsqueda de IcoFont */
+
+
+input[type="text"] {
+    padding: 5px 30px 5px 30px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+}
+
+.icon{
+    position:absolute;
+    left: 10px;
+    margin-top: 5px;
+}
+
+input[type="text"]::placeholder {
+    color: var(--colorSecundarioSombra1);
+}
+
+
 
 .search-box img {
     position: absolute;
@@ -147,12 +171,13 @@ input[type="text"]::placeholder {
     margin-left: 20px;
 }
 
-/* Estilos para el menú desplegable (debes implementar la funcionalidad JavaScript) */
 
-/* Agrega tus estilos e imágenes correspondientes */
 
-/* Estilos para los íconos de usuario y carrito */
-.navbar-right img {
-    width: 20px;
-    height: 20px;
+.fa-bars{
+    margin-right: 20px;
+}
+
+.fa-twitch,.fa-bars, .fa-shopping-cart, .fa-user {
+    color: var( --colorBlancos);
+    font-size: 36px; 
 }
