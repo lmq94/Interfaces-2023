@@ -93,3 +93,66 @@ input::placeholder{
     padding-left: 5px;
     color: var(--colorPlaceholder);
 }
+
+.navbar {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #43434E ;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-box {
+    position: relative;
+    display: inline-block;
+}
+
+input[type="text"] {
+    padding: 5px 30px 5px 10px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+}
+
+input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+.search-box img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+}
+
+/* Estilos para el menú desplegable (debes implementar la funcionalidad JavaScript) */
+
+/* Agrega tus estilos e imágenes correspondientes */
+
+/* Estilos para los íconos de usuario y carrito */
+.navbar-right img {
+    width: 20px;
+    height: 20px;
+}
