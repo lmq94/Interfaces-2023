@@ -33,6 +33,7 @@
     margin:0;
     padding:0;
     font-family:'Roboto',sans-serif ;
+    
 }
 
 body{
@@ -94,6 +95,9 @@ input::placeholder{
     color: var(--colorPlaceholder);
 }
 
+
+/*--------Navbar----------*/
+
 .navbar {
     max-width: 100%;
     margin: 0 auto;
@@ -101,8 +105,8 @@ input::placeholder{
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: var(--colorSecundarioLuz3);
-    height: 50px;
+    background-color: var(--colorSecundarioLuz1);
+    height: 70px;
 }
 
 .navbar-left {
@@ -118,49 +122,44 @@ input::placeholder{
 .search-box {
     position: relative;
     display: inline-block;
+    border: 5px solid var(--colorBlancos);
+    
 }
 
 /* Estilo para el input de búsqueda */
 .search-input {
     padding: 5px 30px 5px 35px; 
     border: none;
-    border-radius: 20px;
-    width: 200px;
+    width: 300px;
+    background-color: var(--colorSecundarioLuz1);
+    
+    
 }
 
 .search-input::placeholder {
     color: var(--colorBlancos);
 }
 
-/* Estilo para el icono de búsqueda de IcoFont */
 
 
-input[type="text"] {
-    padding: 5px 30px 5px 30px;
+input[type = "text"] {
+    padding: 5px 300px 5px 30px;
     border: none;
-    border-radius: 20px;
     width: 200px;
+    color: var(--colorBlancos);
 }
 
 .icon{
-    position:absolute;
+    position: absolute;
     left: 10px;
     margin-top: 5px;
 }
 
-input[type="text"]::placeholder {
-    color: var(--colorSecundarioSombra1);
+input[type = "text"]::placeholder {
+    color: var(--colorBlancos);
 }
 
 
-
-.search-box img {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
 
 .navbar-right {
     display: flex;
@@ -177,7 +176,56 @@ input[type="text"]::placeholder {
     margin-right: 20px;
 }
 
+.fa-search{
+    color: var( --colorBlancos);
+}
+
 .fa-twitch,.fa-bars, .fa-shopping-cart, .fa-user {
     color: var( --colorBlancos);
     font-size: 36px; 
 }
+
+.user-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container {
+    position: relative;
+    margin-left: 10px; 
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background-color: var(--colorSecundarioLuz1);
+}
+
+.user-container:hover .dropdown-menu {
+    position: absolute;
+    top: 50px; 
+    right: 0;
+    display: none; 
+    background-color:var(--colorSecundarioLuz1);
+
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0; 
+}
+
+
+.dropdown-menu li a {
+    color: var(--colorBlancos);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.cerrar-sesion{
+    background-color: var(--colorPrimarioSombra1) !important;
+}
+
