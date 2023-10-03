@@ -111,7 +111,7 @@ input::placeholder{
 
 .navbar-left {
     display: flex;
-    align-items: center;
+  
 }
 
 .navbar-center {
@@ -126,7 +126,7 @@ input::placeholder{
     
 }
 
-/* Estilo para el input de búsqueda */
+
 .search-input {
     padding: 5px 30px 5px 35px; 
     border: none;
@@ -185,17 +185,13 @@ input[type = "text"]::placeholder {
     font-size: 36px; 
 }
 
-.user-container {
-    display: flex;
-    align-items: center;
-}
 
 .menu-container {
     position: relative;
     margin-left: 10px; 
 }
 
-.dropdown-menu {
+.dropdown-user-menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -203,7 +199,7 @@ input[type = "text"]::placeholder {
     background-color: var(--colorSecundarioLuz1);
 }
 
-.user-container:hover .dropdown-menu {
+.user-container:hover .dropdown-user-menu {
     position: absolute;
     top: 50px; 
     right: 0;
@@ -212,13 +208,13 @@ input[type = "text"]::placeholder {
 
 }
 
-.dropdown-menu ul {
+.dropdown-user-menu ul, .menu-categories-dropdown ul {
     list-style-type: none;
     padding: 0; 
 }
 
 
-.dropdown-menu li a {
+.dropdown-user-menu li a, .menu-categories-dropdown li a {
     color: var(--colorBlancos);
     text-decoration: none;
     display: block;
@@ -228,4 +224,25 @@ input[type = "text"]::placeholder {
 .cerrar-sesion{
     background-color: var(--colorPrimarioSombra1) !important;
 }
+
+.menu-toggle {
+    font-size: 24px;
+    color: var(--colorBlancos);
+    cursor: pointer;
+    
+    
+}
+
+/* Estilos para el menú desplegable */
+.menu-categories-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0; /* Ajusta la posición para que quede a la izquierda del icono */
+    display: none;
+    background-color: var(--colorSecundarioLuz1);
+    width: 200px;
+    
+    
+}
+
 
