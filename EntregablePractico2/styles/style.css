@@ -233,11 +233,11 @@ input[type = "text"]::placeholder {
     
 }
 
-/* Estilos para el menú desplegable */
+
 .menu-categories-dropdown {
     position: absolute;
     top: 100%;
-    left: 0; /* Ajusta la posición para que quede a la izquierda del icono */
+    left: 0; 
     display: none;
     background-color: var(--colorSecundarioLuz1);
     width: 200px;
@@ -245,4 +245,99 @@ input[type = "text"]::placeholder {
     
 }
 
+
+.fat-footer {
+    display: flex;
+    background-color:var(--colorSecundarioLuz1);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.fat-footer ul {
+    list-style-type: none;
+}
+
+.fat-fotter li {
+    color: var(--colorPlaceholder);
+}
+
+
+.div-izq-footer {
+    flex: 1;
+    padding: 10px;
+}
+
+.div-izq-footer p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.sub-div-izq-footer{
+    width: 70%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.div-mid-footer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.subdiv-mid-container {
+    display: flex; 
+    justify-content: center; 
+    height: 50%;
+}
+
+.sub-div {
+    flex: 1;
+    padding: 10px;
+    
+    margin: 5px 0;
+    color: #fff;
+}
+
+.full-width-subdiv {
+    flex: 1;
+    padding: 10px;
+    margin-left: 168px;
+    margin-top: 40px ;
+    color: #fff;
+}
+
+
+.div-der-footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sub-div {
+    flex: 1;
+    padding: 10px;
+   
+    margin: 5px 0;
+    color: #fff;
+}
+
+
+
+.fat-footer .text-grey {
+    color:var(--colorPlaceholder);
+    margin-top: 10px;
+}
+
+.fat-footer .border-purple{
+  border:2px solid var(--colorPrimarioSombra3);
+  width: 150px;
+  height: 30px;
+  justify-content: center; /* Centrar horizontalmente */
+  text-align: center;
+}
 
