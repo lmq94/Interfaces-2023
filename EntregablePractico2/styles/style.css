@@ -41,876 +41,776 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%; /* Asegura que el contenedor principal tenga altura del 100% */
+    overflow-x: hidden;
+
 }
 
 body{
     background-color: var(--colorSecundario);
     overflow-x: hidden;
+
 }
 
 .swiper-container:focus-within {
     overflow-x: auto;
   }
 
+ 
+
+  .loading-container {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorSecundarioSombra3);
+    text-align: center;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loading-container p {
+    color: var(--colorBlancos);
+  }
+  
+  /* Estilo para la animación de la tuerca */
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db; /* Cambia a tu color deseado */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Animación de la tuerca */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+a{
+    color: var(--colorBlancos);
+    text-decoration: none;
+}
+h4{
+    color: var(--colorBlancos);
+    font-size: 20px;
+    font-weight: 500;
+}
 
 
 /*--------Login----------*/
 
-.boxForm{
-    width: 700px;
-    height: 455px;
-    background-color: var(--colorSecundarioLuz1);
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 5%;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 10px 90px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 90px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 90px 0px rgba(0,0,0,0.75);
-    display: flex;
-    justify-content: center;
-    padding: 29px;   
-}
-
-.boxForm h2 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-form{
-    width: 330px;
-    height: 400px;
+.formContainer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorSecundario);
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:var(--colorBlancos);
+    justify-content: center;
+    padding-top: 45px;
+    gap: 25px;
+}
+    .formContent {
+        width: 100%;
+        max-width: 350px; 
+        background-color: var(--colorSecundarioLuz1);
+        padding: 30px; 
+        text-align: center;
+        border-radius: 15px;
+        margin: 0 auto; 
+        height: 85%;
+        gap:15px;
+    
+}
+.signSocial{
+    width: 100%;
+max-width: 350px;
+background-color: var(--colorSecundarioLuz1);
+padding: 20px;
+text-align: center;
+border-radius: 15px;
+margin: 0 auto;
+
+margin-bottom: 50px;
 }
 
-.inputBox{
-    width: 100%;
-    font-size: var(--fontSizeLabel);
-    font-weight: 400;
+
+.row1{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin:15px 0px;
+    justify-content: space-between;
 }
-.inputBox input{
+
+
+.formContent h1{
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: var(--colorBlancos);
+    position: relative;
+}
+
+.formContent h1::after{
+    content:'';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--colorPrimarioLuz1);
+    position:absolute;
+    bottom:-12px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.inputField input{
+    width: 100%;
+}
+
+input{
     height: 30px;
-    border-radius: 4px;
-    margin: 5px 0px;
-   
+    background-color: var(--colorSecundarioLuz3);
+    outline: none;
+    border: 0;
+    color: var(--colorBlancos);
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.inputField{
+    height: 70px;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 input::placeholder{
+    color: var(--colorBlancos);
     padding-left: 5px;
-    color: var(--colorPlaceholder);
 }
 
-
-/*--------Navbar----------*/
-
-.navbar {
-    max-width: 100%;
-    margin: 0 auto;
+.btnField{
+    gap: 50px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    background-color: var(--colorSecundarioLuz1);
-    height: 70px;
+    height: 35px;
 }
 
- .navbar-icono-svg {
+.btnField button,.btnField a{
+    flex-basis: 48%;
+    transition: background .5s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; /* Esto quitará los márgenes entre el borde y el botón */
+}
+
+
+.btnField button:hover,.btnField a:hover{
+    background-color: var(--colorPrimarioSombra2);
+}
+
+.btnField a{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
+.btnField button,.btnField a{
+    height: 100%;
+    cursor: pointer;
+    background-color: var(--colorPrimario);
+    color: var(--colorBlancos);
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+}
+
+.social-buttons{
+    margin-top: 15px;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signSocial p{
+    color: var(--colorBlancos);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: var(--colorPrimario);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    width: 65%;
+}
+
+.social-buttons a i {
+    margin-right: 10px;
+}
+
+.social-buttons a.google-button {
+    background-color: var(--colorPrimario); 
+}
+
+.social-buttons a:hover {
+    background-color: var(--colorPrimarioSombra1); 
+}
+
+.inputField.succcess input{
+    border-color: #00D700;
+}
+
+.inputField.error input{
+    border-color: red;
+}
+
+
+/*---------HEADER--------*/
+header {
+    background-color: var(--colorSecundarioLuz1);
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.left svg {
     width: 25px;
     height: 25px;
-    margin-right: 20px;
+    fill: var(--colorBlancos); 
 }
 
-.navbar-left {
+
+.center {
+    flex: 1;
     display: flex;
-  
+    width: 50%;
+    justify-content: center;
 }
 
-.navbar-center {
-    flex-grow: 1;
-    text-align: center;
+.searchInput {
+    width: 60%;
+    padding: 10px 30px 10px 10px;
+    border: 0.5px solid var(--colorPlaceholder);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: transparent;
+    color: var(--colorPlaceholder);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
-.search-box {
-    position: relative;
-    display: inline-block;
-    border: 5px solid var(--colorBlancos);
-    
-}
-
-
-.search-input {
-    padding: 5px 30px 5px 35px; 
-    border: none;
-    width: 300px;
-    background-color: var(--colorSecundarioLuz1);
-    
-    
-}
-
-.search-input::placeholder {
-    color: var(--colorBlancos);
+.searchInput::placeholder {
+    color: var(--colorPlaceholder); 
 }
 
 
-
-input[type = "text"] {
-    padding: 5px 300px 5px 30px;
-    border: none;
-    width: 200px;
-    color: var(--colorBlancos);
-}
-
-.icon{
-    position: absolute;
-    left: 10px;
-    margin-top: 5px;
-}
-
-input[type = "text"]::placeholder {
-    color: var(--colorBlancos);
-}
-
-
-
-.navbar-right {
+.right {
     display: flex;
     align-items: center;
+    gap: 5px; 
+    height: 25px;
 }
 
-.navbar-right a {
-    margin-left: 20px;
+.right svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--colorBlancos); 
+}
+.user-menu-container {
+  position: relative; 
+  display: inline-block; 
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  top: 90%; 
+  right: 0; 
+  background-color: var(--colorSecundarioLuz2);
+  border: 1px solid #EFEFF1;
 }
 
 
-
-.fa-bars{
-    margin-right: 20px;
+.user-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.fa-search{
-    color: var( --colorBlancos);
-}
-
-.fa-twitch,.fa-bars, .fa-shopping-cart, .fa-user {
-    color: var( --colorBlancos);
-    font-size: 36px; 
+.user-menu li {
+  padding: 10px;
 }
 
 
-.menu-container {
+.user-menu.active {
+  display: block;
+}
+
+.user-menu ul li:last-child {
+  background-color: var(--colorPrimarioSombra2); 
+}
+/*--------MAIN-----------*/
+ main{
+   
+    background-color: var(--colorSecundario);
+    flex-grow: 1;
+   
+ }
+
+ main h2{
+  color: var(--colorBlancos);
+  text-align: center;
+ }
+
+.category-container{
+  margin-top: 30px;
+  display: flex;
+ }
+/*-------FOOTER--------*/
+footer {
+
+  bottom: 0;
+  width: 100%;
+  background-color: var(--colorSecundarioLuz1); /* Puedes ajustar el color de fondo según tus preferencias */
+  padding: 20px; /* Puedes ajustar el espacio interior del footer según tus preferencias */
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 620px) {
+  /* Cambia la dirección de flexión para mostrar el footer como una fila */
+  footer .mainFooter {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     position: relative;
-    margin-left: 10px; 
-}
-
-.dropdown-user-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: none;
-    background-color: var(--colorSecundarioLuz1);
-}
-
-.user-container:hover .dropdown-user-menu {
-    position: absolute;
-    top: 50px; 
-    right: 0;
-    display: none; 
-    background-color:var(--colorSecundarioLuz1);
-
-}
-
-.dropdown-user-menu ul, .menu-categories-dropdown ul {
-    list-style-type: none;
-    padding: 0; 
-}
-
-
-.dropdown-user-menu li a, .menu-categories-dropdown li a {
-    color: var(--colorBlancos);
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-}
-
-.cerrar-sesion{
-    background-color: var(--colorPrimarioSombra1) !important;
-}
-
-.menu-toggle {
-    font-size: 24px;
-    color: var(--colorBlancos);
-    cursor: pointer;
-    
-    
-}
-
-
-.menu-categories-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0; 
-    display: none;
-    background-color: var(--colorSecundarioLuz1);
-    width: 200px;
-    
-    
-}
-
-
-
-
-.icono-svg {
-    width: 15px;
-    height: 15px;
-}
-
-.icon-container {
-    display: flex; /* Utiliza un contenedor flexible para alinear los iconos en una fila */
-    line-height: 0;
-    margin-top: 20px;
-}
-
-.icon-container svg {
-    margin-right: 50px; /* Ajusta el margen entre los iconos según tus preferencias */
-}
-
-.icon-container svg:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último icono */
-}
-
-
-
-
-.category-container {
-    display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos */
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    margin-top: 30px;
-    margin-left: 10px;
-    color: var(--colorPrimarioSombra3);
-
-}
-
-.category-container h2 {
-    margin-right: 10px; /* Agrega un margen a la derecha del título para separarlo del ícono */
-}
-
-.fat-footer {
-    background-color: var(--colorSecundarioLuz1);
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    position: fixed; /* Cambia de 'absolute' a 'fixed' */
-    width: 100%;
-    bottom: 0;
-    left: 0; /* Asegura que el footer comience desde la izquierda */
-    right: 0; /* Asegura que el footer termine en la derecha */
   }
 
-.top-section {
-    display: flex;;
-    flex-wrap: wrap; 
-    justify-content: center;
+  /* Estilos para las clases dentro de "mainFooter" en resoluciones más grandes */
+  footer .mainFooter .column {
+    width: 30%; /* O ajusta el ancho según tus necesidades */
+    margin: 0; /* Elimina el margen vertical entre las columnas */
+  }
+
+  footer .mainFooter .contact {
+    flex: 1; /* Permite que el contenedor de contacto ocupe el espacio restante */
+  }
+
+  .mainFooter .footerLinks{
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 70%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    }
+
+    footer .terminos{
+      display: flex;
+      flex-direction: row;
+      width: 70%;
+      margin: 0% 15%;
+      justify-content: space-around;
+      gap:10px;
+      text-align: center;
+      align-items: center;
+
+    }
+
+
+    .column{
+      display: flex;
+      width: 30%;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+
+      
+  }
+
+    .terminos .box2{
+
+      margin-right: 200px;
+
+      
+
+
+    }
+
+    main h2{
+      color: var(--colorBlancos);
+      text-align:start;
+     }
+
+     .searchInput {
+      width: 40%;
+     
+  }
+
+  }
+
+  /* Estilos adicionales según tus necesidades */
+
+
+
+
+.mainFooter{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
-
-    
-    
 }
 
-.footer-lists{
-    margin-right: 150px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    flex: 1; /* Dividir el espacio de manera equitativa */
-    margin-right: 10px; /* Margen entre las listas */
-    margin-left: 40px;
-}
-
-.fat-footer ul{
-    margin-top: 30px;
-}
-
-.fat-footer li {
-    margin-bottom: 10px; /* Espacio vertical entre las <li> */
-}
-
-/* Establecer el color de fondo gris para las <li> excepto la primera */
-.fat-footer ul li:not(:first-child) {
-    color: var( --colorPlaceholder);
-}
-
-.split {
+.footerLinks{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 150px;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 70%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.split-top p{
-    border: var(--colorPrimarioSombra3) solid 5px;
-    height: 50px;
-    width: 200px;
-    display: flex; 
-    justify-content: center; 
+.column{
+    display: flex;
+    width: 100%;
+    text-align: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.column h4 {
+    margin-bottom: 5px;
+    color: var(--colorBlancos);
+}
+
+.column li{
+    color: var(--colorPlaceholder);
+    list-style: none;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
     
 }
 
-.split-top h6{
-    margin-left: 60px;
-}
-
-.split-top,
-.split-bottom {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.split-bottom p{
-    width: 75%;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.bottom-section {
+.boxContact{
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.containerContact{
+    border: 2px solid var(--colorPrimarioLuz1);
+    width: 240px;
+    height: 60px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerContact a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.contact p{
+    gap: 5px;
     text-align: center;
-    
+   
+    color: var(--colorBlancos);
 }
 
-.left-half{
-    margin-right: 15px;
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.right-half{
-    margin-left: 200px;
+.socialNetworks{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.left-half,
-.right-half {
-
-    margin-right: 10px;
-    
+.boxSocial p{
+    color: var(--colorBlancos);
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.left-half h6, .split-top h6{
-    color:var(--colorPlaceholder);
-    margin-top: 10px;
+.boxSocial{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-/*carrouselllllll*/
-
-main h2{
-  color: var(--colorBlancos);
-  margin-left: 30px;
+.terminos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0% 15%;
+    justify-content: space-around;
+    gap:10px;
+    text-align: center;
 }
 
+.box1 a, .box2 p{
+   color:var(--colorBlancos);
+   font-size: 14px;  
+   font-weight: 500;
+}
 
+.box1 p, .box2 span{
+    font-size:12px;
+    color: var(--colorPlaceholder);
+}
+.box2 p{
+  width: 180px;
+}
+
+.box1{
+  gap:10px;
+}
+
+.box1 p{
+  margin-top: 5px;
+}
+
+.box1 a{
+  margin-bottom:5px;
+}
+
+.box2{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
 
 
 .container{
-    width: 90%;
-    margin-top: 10px ;
-    padding: 10px 40px;
-    height: 310px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
-  
-  .swiper-slide {
-    min-height: 300px; 
-  }
-
-  .container .swiper-slide {
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-    background-color: var(--colorSecundario);
-    border-radius: 15px;
-    text-align: start;
-
-   
-   
-  }
-  .container .swiper-slide img{
-    display: block;
-     width: 100%;
-     height: 200px;
-     object-fit: cover;
-     border-top-left-radius: 15px;
-     border-top-right-radius: 15px;
-  } 
+  width: 90%;
+  margin-top: 10px ;
+  padding: 10px 40px;
+  height: 310px;
+  overflow-x: hidden;
+}
 
 
-  .container .swiper-container{
-    width: 100%;
-    height: 100%;
-  }
+.swiper-slide {
+  min-height: 300px; 
+}
 
-  .card-price {
-  text-align: right;
+.container .swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--colorSecundario);
+  border-radius: 15px;
+  text-align: start;
+
+ 
+ 
+}
+
+.card-slide-active {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; 
+}
+.container .swiper-slide img{
+  display: block;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+} 
+
+
+.container .swiper-container{
+  width: 100%;
+  height: 100%;
+}
+
+.card-price {
+text-align: right;
 }
 
 /* Estilos para el contenedor de acciones */
 .card-actions-container {
-  display: flex;
-  flex-direction: column; /* Muestra los elementos en una columna */
-  align-items: center; /* Centra horizontalmente los elementos */
-  margin-top: 10px; /* Espacio entre el precio y las acciones */
+display: flex;
+flex-direction: column; /* Muestra los elementos en una columna */
+align-items: center; /* Centra horizontalmente los elementos */
+margin-top: 10px; /* Espacio entre el precio y las acciones */
 }
 
 .card-add {
-  font-size: 14px;
-  color: var(--colorBlancos);
-  margin-top: 5px; /* Espacio entre el precio y el texto "Añadir" */
+font-size: 14px;
+color: var(--colorBlancos);
+margin-top: 5px; /* Espacio entre el precio y el texto "Añadir" */
 }
 
 .card-cart {
-  color: #1d6ce2;
-  font-size: 5px;
-  margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
+color: #1d6ce2;
+font-size: 5px;
+margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
 }
 
-  .swiper-slide .card-description {
-    background-color: var(--colorSecundarioLuz1);
-    color: var(--colorBlancos);
-  }
+.swiper-slide .card-description {
+  background-color: var(--colorSecundarioLuz1);
+  color: var(--colorBlancos);
+}
 
 
-  .container .swiper-slide .card-description{
-      padding:1rem 1rem;
-  }
- 
-  .container .swiper-slide .card-link{
-     text-align: center;
-    
-  }
-  .container .swiper-slide .card-link a{
-      text-decoration: none;
-      color: #1d6ce2;
-  }
-  .swiper-button-next {
-    right: 0 !important; 
-    top: calc(50% + -200px) !important; 
-    transform: translateY(-50%) !important; 
-    
+.container .swiper-slide .card-description{
+    padding:1rem 1rem;
+}
+
+.container .swiper-slide .card-link{
+   text-align: center;
+  
+}
+.container .swiper-slide .card-link a{
+    text-decoration: none;
+    color: #1d6ce2;
+}
+.swiper-button-next {
+  right: 0 !important; 
+  top: calc(50% + -200px) !important; 
+  transform: translateY(-50%) !important; 
+  
 }
 
 
 
 .swiper-button-prev {
-    left: 0 !important; /* Mueve la flecha de navegación hacia la izquierda */
-    top: calc(50% + -200px) !important; /* Alinea la flecha ligeramente hacia abajo */
-    transform: translateY(-50%) !important; /* Alinea verticalmente la flecha */
-    /* Puedes ajustar el tamaño y el estilo de la flecha según tus preferencias */
+  left: 0 !important; /* Mueve la flecha de navegación hacia la izquierda */
+  top: calc(50% + -200px) !important; /* Alinea la flecha ligeramente hacia abajo */
+  transform: translateY(-50%) !important; /* Alinea verticalmente la flecha */
+  /* Puedes ajustar el tamaño y el estilo de la flecha según tus preferencias */
 }
 
 .card-bottom {
-    display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
-    justify-content: flex-end;
-  }
-  
-  /* Estilos para el precio */
-  .card-price-container {
-    text-align:right; /* Alinear el precio al centro */
-    font-size: 14px; /* Tamaño del precio */
-    color: var(--colorBlancos);
-    margin-bottom: 15px; /* Espacio entre el precio y el contenido inferior */
-    
-  }
-
-  
-
-  
-
- .card-second-price {
-    text-decoration: line-through; /* Evita que el contenido de card-second-price se tache */
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: flex-end;
 }
-  .card-description {
-    display: flex;
-    justify-content: space-between; /* Coloca los elementos a los extremos (nombre a la izquierda, div con precio, icono y acción a la derecha) */
-    min-height: 80px; 
-  
-  }
-  
-  .card-title {
-    text-align: left; /* Alinea el nombre a la izquierda */
-  }
 
-  .card-title h4:hover{
-      color: var(--colorHover);
-  }
+/* Estilos para el precio */
+.card-price-container {
+  text-align:right; /* Alinear el precio al centro */
+  font-size: 14px; /* Tamaño del precio */
+  color: var(--colorBlancos);
+  margin-bottom: 15px; /* Espacio entre el precio y el contenido inferior */
   
- 
+}
 
-  .card-action-icon-container {
-    display: flex;
-    flex-direction: row; /* Muestra los elementos en una columna */
-    align-items: center; /* Centra horizontalmente los elementos */
-     /* Espacio entre el precio y las acciones */
-  }
-  * Ocupa todo el ancho disponible */
-  
 
-  
+
+.card-second-price {
+  text-decoration: line-through; /* Evita que el contenido de card-second-price se tache */
+}
+.card-description {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos a los extremos (nombre a la izquierda, div con precio, icono y acción a la derecha) */
+  min-height: 80px; 
+
+}
+
+.card-title {
+  text-align: left; /* Alinea el nombre a la izquierda */
+}
+
+.card-title h4:hover{
+  color: var(--colorHover);
+}
+
+
+
+.card-action-icon-container {
+  display: flex;
+  flex-direction: row; /* Muestra los elementos en una columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+   /* Espacio entre el precio y las acciones */
+}
+* Ocupa todo el ancho disponible */
+
+
+
 
 
 
 /* Estilo para el icono de carrito */
 .card-cart {
-    color: #1d6ce2; /* Color del icono de carrito */
-    font-size: 5px; /* Tamaño del icono */
-    margin-right: 1px; /* Espacio entre el icono y la palabra "Añadir" */
+  color: #1d6ce2; /* Color del icono de carrito */
+  font-size: 5px; /* Tamaño del icono */
+  margin-right: 1px; /* Espacio entre el icono y la palabra "Añadir" */
 }
 
 /* Estilo para el texto "Añadir" */
 .card-add {
-    display: flex;
-    justify-content: space-between; /* Alinea los elementos al principio y al final */
-    align-items: center; /* Centra verticalmente los elementos */
-    font-size: 14px; /* Tamaño del texto */
-    color: var(--colorBlancos);
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos al principio y al final */
+  align-items: center; /* Centra verticalmente los elementos */
+  font-size: 14px; /* Tamaño del texto */
+  color: var(--colorBlancos);
 }
 
 
 
 
 .car-icono-svg {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
-
-
-.card-slide-active {
-    transform: scale(1.1); /* Escala la tarjeta al 110% de su tamaño original */
-    transition: transform 0.3s ease; /* Aplica una transición suave de 0.3 segundos */
-}
-
-
-/*carrouselllllll*/
-
-
-@media (min-width: 620px) {
-    .fat-footer {
-        background-color: var(--colorSecundarioLuz1);
-        color: white;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        bottom: 0;
-        position: absolute;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .footer-lists{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .top-section {
-        display: flex;
-        flex-wrap: wrap; /* Permitir el ajuste de línea para los ul */
-        
-        flex-direction: none;
-        justify-content: center;
-       
-    }
-
-    .fat-footer {
-        background-color: var(--colorSecundarioLuz1);
-        color: white;
-        padding: 20px;
-        display: flex;
-        margin-top: 25px;
-        justify-content: center;
-        bottom: 0;
-        position: relative;
-        width: 100%;
-      }
-    
-      .footer-lists {
-        display: flex;
-        justify-content: space-between;
-      }
-    
-      .top-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row; /* Alinear las listas horizontalmente en escritorio */
-      }
-    
-      /* Estilos para cada lista */
-      .fat-footer ul {
-        list-style-type: none;
-        padding: 0;
-        flex: 1;
-        margin-right: 10px;
-        margin-left: 40px;
-      }
-    
-      .fat-footer li {
-        margin-bottom: 10px;
-      }
-    
-      /* Establecer el color de fondo gris para las <li> excepto la primera */
-      .fat-footer ul li:not(:first-child) {
-        color: var(--colorPlaceholder);
-      }
-    
-      .split {
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-      }
-    
-      .split-top p {
-        border: var(--colorPrimarioSombra3) solid 5px;
-        height: 50px;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    
-      .split-top h6 {
-        margin-left: 60px;
-      }
-    
-      .split-top,
-      .split-bottom {
-        padding: 10px;
-        margin-top: 10px;
-      }
-    
-      .split-bottom p {
-        width: 75%;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    
-      .bottom-section {
-        display: flex;
-        flex-direction: row;
-        margin-top: 20px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-    
-      .left-half {
-        margin-right: 15px;
-      }
-    
-      .right-half {
-        margin-left: 200px;
-      }
-    
-      .left-half,
-      .right-half {
-        margin-right: 10px;
-      }
-    
-      .left-half h6,
-      .split-top h6 {
-        color: var(--colorPlaceholder);
-        margin-top: 10px;
-      }
-
-      /*carrouselllllll*/
-
-      .container{
-        width: 90%;
-        margin-top: 10px ;
-        padding: 10px 40px;
-        height: 310px;
-        overflow-x: hidden;
-      }
-    
-      
-      .swiper-slide {
-        min-height: 300px; 
-      }
-    
-      .container .swiper-slide {
-        position: relative;
-        text-align: center;
-        font-size: 18px;
-        background-color: var(--colorSecundario);
-        border-radius: 15px;
-        text-align: start;
-    
-       
-       
-      }
-      .container .swiper-slide img{
-        display: block;
-         width: 100%;
-         height: 200px;
-         object-fit: cover;
-         border-top-left-radius: 15px;
-         border-top-right-radius: 15px;
-      } 
-    
-    
-      .container .swiper-container{
-        width: 100%;
-        height: 100%;
-      }
-    
-      .card-price {
-      text-align: right;
-    }
-    
-    /* Estilos para el contenedor de acciones */
-    .card-actions-container {
-      display: flex;
-      flex-direction: column; /* Muestra los elementos en una columna */
-      align-items: center; /* Centra horizontalmente los elementos */
-      margin-top: 10px; /* Espacio entre el precio y las acciones */
-    }
-    
-    .card-add {
-      font-size: 14px;
-      color: var(--colorBlancos);
-      margin-top: 5px; /* Espacio entre el precio y el texto "Añadir" */
-    }
-    
-    .card-cart {
-      color: #1d6ce2;
-      font-size: 5px;
-      margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
-    }
-    
-      .swiper-slide .card-description {
-        background-color: var(--colorSecundarioLuz1);
-        color: var(--colorBlancos);
-      }
-    
-    
-      .container .swiper-slide .card-description{
-          padding:1rem 1rem;
-      }
-     
-      .container .swiper-slide .card-link{
-         text-align: center;
-        
-      }
-      .container .swiper-slide .card-link a{
-          text-decoration: none;
-          color: #1d6ce2;
-      }
-      .swiper-button-next {
-        right: 0 !important; 
-        top: calc(50% + -200px) !important; 
-        transform: translateY(-50%) !important; 
-        
-    }
-    
-    
-    
-    .swiper-button-prev {
-        left: 0 !important; /* Mueve la flecha de navegación hacia la izquierda */
-        top: calc(50% + -200px) !important; /* Alinea la flecha ligeramente hacia abajo */
-        transform: translateY(-50%) !important; /* Alinea verticalmente la flecha */
-        /* Puedes ajustar el tamaño y el estilo de la flecha según tus preferencias */
-    }
-    
-    .card-bottom {
-        display: flex;
-        flex-direction: column; /* Apila los elementos verticalmente */
-        justify-content: flex-end;
-      }
-      
-      /* Estilos para el precio */
-      .card-price-container {
-        text-align:right; /* Alinear el precio al centro */
-        font-size: 14px; /* Tamaño del precio */
-        color: var(--colorBlancos);
-        margin-bottom: 15px; /* Espacio entre el precio y el contenido inferior */
-        
-      }
-    
-      
-    
-     .card-second-price {
-        text-decoration: line-through; /* Evita que el contenido de card-second-price se tache */
-    }
-      .card-description {
-        display: flex;
-        justify-content: space-between; /* Coloca los elementos a los extremos (nombre a la izquierda, div con precio, icono y acción a la derecha) */
-        min-height: 80px; 
-      
-      }
-      
-      .card-title {
-        text-align: left; /* Alinea el nombre a la izquierda */
-      }
-      
-     
-    
-      .card-action-icon-container {
-        display: flex;
-        flex-direction: row; /* Muestra los elementos en una columna */
-        align-items: center; /* Centra horizontalmente los elementos */
-         /* Espacio entre el precio y las acciones */
-      }
-      * Ocupa todo el ancho disponible */
-      
-    
-      
-    
-    
-    
-    /* Estilo para el icono de carrito */
-    .card-cart {
-        color: #1d6ce2; /* Color del icono de carrito */
-        font-size: 5px; /* Tamaño del icono */
-        margin-right: 1px; /* Espacio entre el icono y la palabra "Añadir" */
-    }
-    
-    /* Estilo para el texto "Añadir" */
-    .card-add {
-        display: flex;
-        justify-content: space-between; /* Alinea los elementos al principio y al final */
-        align-items: center; /* Centra verticalmente los elementos */
-        font-size: 14px; /* Tamaño del texto */
-        color: var(--colorBlancos);
-    }
-    
-    
-    
-    
-    .car-icono-svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    
-
-    
-}
-
-
-
-
-

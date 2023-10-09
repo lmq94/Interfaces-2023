@@ -16,7 +16,7 @@ const datosCards1 = [
         icono: 'assets/iconos/carrito-vender.svg'
       },
       {
-        imagen: 'assets/images/4-linea.jpg',
+        imagen: 'assets/images/Los-Simpson.jpg',
         titulo: '4 EN LINEA',
         accion: 'JUGAR',
         icono: 'assets/iconos/play.svg'
@@ -658,12 +658,30 @@ icono: 'assets/iconos/carrito-vender.svg'
 
 
     document.addEventListener('DOMContentLoaded', function () {
-      const menuIcon = document.getElementById('menu-icon');
-      const navbar = document.querySelector('.navbar');
-      const userIcon = document.getElementById('user-icon');
-      const userDropdown = document.getElementById('user-dropdown');
-  
+      const userIcon = document.getElementById('userIcon');
+      const userMenu = document.getElementById('userMenu');
+      const loadingContainer = document.getElementById('loadingContainer');
+
+      const rutaActual = window.location.pathname;
+
+
+// Agrega un evento de clic al icono de usuario
+        userIcon.addEventListener('click', () => {
+          // Toggle (alternar) la clase 'active' en el menú para mostrarlo u ocultarlo
+          userMenu.classList.toggle('active');
+        });
+
+        
     
+        if (window.location.pathname === rutaActual) {
+          // Muestra el mensaje de carga
+          loadingContainer.style.display = 'block';
+  
+          // Espera 5 segundos (5000 milisegundos) antes de ocultar el mensaje de carga
+          setTimeout(() => {
+              loadingContainer.style.display = 'none';
+          }, 5000);
+      }
   
      
   
@@ -731,23 +749,7 @@ icono: 'assets/iconos/carrito-vender.svg'
   });
 
   
-      menuIcon.addEventListener('click', function () {
-          navbar.classList.toggle('show-menu');
-      });
-  
-      userIcon.addEventListener('click', function () {
-          if (userDropdown.style.display === 'block') {
-              userDropdown.style.display = 'none';
-          } else {
-              userDropdown.style.display = 'block';
-          }
-      });
-
-      carrusel.on('slideChangeTransitionStart', () => {
-     
-  
-      // Más funciones y código aquí si es necesario
-  });
-
+      
+   
 
 });

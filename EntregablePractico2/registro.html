@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register</title>
 </head>
 <body>
-    <main>
+    <div class="formContainer">
+        <div class="formContent">
+            <h1 class="title">Register</h1>
+            <form id="register" action="">
+                    <div class="row1">
+                        <div class="inputField">
+                            <input type="text" id="name"name="name"placeholder="Name" >
+                            <small></small>
+                        </div>
+                        <div class="inputField">
+                            <input type="number" required placeholder="Age" name="age">
+                        </div>
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Nickname(Optional)">
+                    </div>
+                    <div class="inputField">
+                        <input type="email"  id="email" name="email"placeholder="Email" required>
+                        <p class="error-message"></p>
+                    </div>
+                    <div class="inputField">
+                        <input type="password" name="password1" id="password1" required placeholder="Password">
+                        <p></p>
+                    </div>
+                    <div class="inputField">
+                        <input type="password" name="password2" id="password2" required placeholder="Repeat password">
+                        <p></p>
+                    </div>
+                    <div class="btnField">
+                        <button id="signUp">Sign Up</button>
+                        <a href="login.html">Login</a>
+                    </div>
+            </form>
+        </div>
 
-    </main>
-    <footer>
-        
-    </footer>
+    <script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>
