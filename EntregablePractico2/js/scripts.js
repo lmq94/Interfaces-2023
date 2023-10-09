@@ -123,7 +123,7 @@ const datosCards1 = [
   },
   {
     imagen: 'assets/images/Kirby-Gore.jpg',
-    titulo: 'KIRBY',
+    titulo: 'KIRBY GORE',
     accion: 'JUGAR',
     icono: 'assets/iconos/play.svg'
 
