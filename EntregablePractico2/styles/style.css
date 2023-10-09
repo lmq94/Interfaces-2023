@@ -36,9 +36,21 @@
     
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Asegura que el contenedor principal tenga altura del 100% */
+}
+
 body{
     background-color: var(--colorSecundario);
+    overflow-x: hidden;
 }
+
+.swiper-container:focus-within {
+    overflow-x: auto;
+  }
 
 
 
@@ -107,6 +119,12 @@ input::placeholder{
     padding: 0 20px;
     background-color: var(--colorSecundarioLuz1);
     height: 70px;
+}
+
+ .navbar-icono-svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
 }
 
 .navbar-left {
@@ -246,98 +264,653 @@ input[type = "text"]::placeholder {
 }
 
 
+
+
+.icono-svg {
+    width: 15px;
+    height: 15px;
+}
+
+.icon-container {
+    display: flex; /* Utiliza un contenedor flexible para alinear los iconos en una fila */
+    line-height: 0;
+    margin-top: 20px;
+}
+
+.icon-container svg {
+    margin-right: 50px; /* Ajusta el margen entre los iconos según tus preferencias */
+}
+
+.icon-container svg:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último icono */
+}
+
+
+
+
+.category-container {
+    display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    margin-top: 30px;
+    margin-left: 10px;
+    color: var(--colorPrimarioSombra3);
+
+}
+
+.category-container h2 {
+    margin-right: 10px; /* Agrega un margen a la derecha del título para separarlo del ícono */
+}
+
 .fat-footer {
+    background-color: var(--colorSecundarioLuz1);
+    color: white;
+    padding: 20px;
     display: flex;
-    background-color:var(--colorSecundarioLuz1);
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    flex-direction: column;
+    position: fixed; /* Cambia de 'absolute' a 'fixed' */
     width: 100%;
+    bottom: 0;
+    left: 0; /* Asegura que el footer comience desde la izquierda */
+    right: 0; /* Asegura que el footer termine en la derecha */
+  }
+
+.top-section {
+    display: flex;;
+    flex-wrap: wrap; 
+    justify-content: center;
+    flex-direction: row;
+    
+
+    
+    
 }
-.fat-footer ul {
+
+.footer-lists{
+    margin-right: 150px;
+}
+
+ul {
     list-style-type: none;
+    padding: 0;
+    flex: 1; /* Dividir el espacio de manera equitativa */
+    margin-right: 10px; /* Margen entre las listas */
+    margin-left: 40px;
 }
 
-.fat-fotter li {
-    color: var(--colorPlaceholder);
+.fat-footer ul{
+    margin-top: 30px;
 }
 
+.fat-footer li {
+    margin-bottom: 10px; /* Espacio vertical entre las <li> */
+}
 
-.div-izq-footer {
-    flex: 1;
+/* Establecer el color de fondo gris para las <li> excepto la primera */
+.fat-footer ul li:not(:first-child) {
+    color: var( --colorPlaceholder);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 150px;
+}
+
+.split-top p{
+    border: var(--colorPrimarioSombra3) solid 5px;
+    height: 50px;
+    width: 200px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
+}
+
+.split-top h6{
+    margin-left: 60px;
+}
+
+.split-top,
+.split-bottom {
     padding: 10px;
-}
-
-.div-izq-footer p {
-    margin: 5px 0;
-    color: #fff;
-}
-
-.sub-div-izq-footer{
-    width: 70%;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 
+.split-bottom p{
+    width: 75%;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-.div-mid-footer {
-    flex: 2;
+.bottom-section {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.subdiv-mid-container {
-    display: flex; 
-    justify-content: center; 
-    height: 50%;
-}
-
-.sub-div {
-    flex: 1;
-    padding: 10px;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     
-    margin: 5px 0;
-    color: #fff;
 }
 
-.full-width-subdiv {
-    flex: 1;
-    padding: 10px;
-    margin-left: 168px;
-    margin-top: 40px ;
-    color: #fff;
+.left-half{
+    margin-right: 15px;
 }
 
-
-.div-der-footer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+.right-half{
+    margin-left: 200px;
 }
 
-.sub-div {
-    flex: 1;
-    padding: 10px;
-   
-    margin: 5px 0;
-    color: #fff;
+.left-half,
+.right-half {
+
+    margin-right: 10px;
+    
 }
 
-
-
-.fat-footer .text-grey {
+.left-half h6, .split-top h6{
     color:var(--colorPlaceholder);
     margin-top: 10px;
 }
 
-.fat-footer .border-purple{
-  border:2px solid var(--colorPrimarioSombra3);
-  width: 150px;
-  height: 30px;
-  justify-content: center; /* Centrar horizontalmente */
-  text-align: center;
+
+/*carrouselllllll*/
+
+main h2{
+  color: var(--colorBlancos);
+  margin-left: 30px;
 }
+
+
+
+
+.container{
+    width: 90%;
+    margin-top: 10px ;
+    padding: 10px 40px;
+    height: 310px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  
+  .swiper-slide {
+    min-height: 300px; 
+  }
+
+  .container .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--colorSecundario);
+    border-radius: 15px;
+    text-align: start;
+
+   
+   
+  }
+  .container .swiper-slide img{
+    display: block;
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+  } 
+
+
+  .container .swiper-container{
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-price {
+  text-align: right;
+}
+
+/* Estilos para el contenedor de acciones */
+.card-actions-container {
+  display: flex;
+  flex-direction: column; /* Muestra los elementos en una columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  margin-top: 10px; /* Espacio entre el precio y las acciones */
+}
+
+.card-add {
+  font-size: 14px;
+  color: var(--colorBlancos);
+  margin-top: 5px; /* Espacio entre el precio y el texto "Añadir" */
+}
+
+.card-cart {
+  color: #1d6ce2;
+  font-size: 5px;
+  margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
+}
+
+  .swiper-slide .card-description {
+    background-color: var(--colorSecundarioLuz1);
+    color: var(--colorBlancos);
+  }
+
+
+  .container .swiper-slide .card-description{
+      padding:1rem 1rem;
+  }
+ 
+  .container .swiper-slide .card-link{
+     text-align: center;
+    
+  }
+  .container .swiper-slide .card-link a{
+      text-decoration: none;
+      color: #1d6ce2;
+  }
+  .swiper-button-next {
+    right: 0 !important; 
+    top: calc(50% + -200px) !important; 
+    transform: translateY(-50%) !important; 
+    
+}
+
+
+
+.swiper-button-prev {
+    left: 0 !important; /* Mueve la flecha de navegación hacia la izquierda */
+    top: calc(50% + -200px) !important; /* Alinea la flecha ligeramente hacia abajo */
+    transform: translateY(-50%) !important; /* Alinea verticalmente la flecha */
+    /* Puedes ajustar el tamaño y el estilo de la flecha según tus preferencias */
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: flex-end;
+  }
+  
+  /* Estilos para el precio */
+  .card-price-container {
+    text-align:right; /* Alinear el precio al centro */
+    font-size: 14px; /* Tamaño del precio */
+    color: var(--colorBlancos);
+    margin-bottom: 15px; /* Espacio entre el precio y el contenido inferior */
+    
+  }
+
+  
+
+  
+
+ .card-second-price {
+    text-decoration: line-through; /* Evita que el contenido de card-second-price se tache */
+}
+  .card-description {
+    display: flex;
+    justify-content: space-between; /* Coloca los elementos a los extremos (nombre a la izquierda, div con precio, icono y acción a la derecha) */
+    min-height: 80px; 
+  
+  }
+  
+  .card-title {
+    text-align: left; /* Alinea el nombre a la izquierda */
+  }
+
+  .card-title h4:hover{
+      color: var(--colorHover);
+  }
+  
+ 
+
+  .card-action-icon-container {
+    display: flex;
+    flex-direction: row; /* Muestra los elementos en una columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+     /* Espacio entre el precio y las acciones */
+  }
+  * Ocupa todo el ancho disponible */
+  
+
+  
+
+
+
+/* Estilo para el icono de carrito */
+.card-cart {
+    color: #1d6ce2; /* Color del icono de carrito */
+    font-size: 5px; /* Tamaño del icono */
+    margin-right: 1px; /* Espacio entre el icono y la palabra "Añadir" */
+}
+
+/* Estilo para el texto "Añadir" */
+.card-add {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al principio y al final */
+    align-items: center; /* Centra verticalmente los elementos */
+    font-size: 14px; /* Tamaño del texto */
+    color: var(--colorBlancos);
+}
+
+
+
+
+.car-icono-svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+.card-slide-active {
+    transform: scale(1.1); /* Escala la tarjeta al 110% de su tamaño original */
+    transition: transform 0.3s ease; /* Aplica una transición suave de 0.3 segundos */
+}
+
+
+/*carrouselllllll*/
+
+
+@media (min-width: 620px) {
+    .fat-footer {
+        background-color: var(--colorSecundarioLuz1);
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer-lists{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-section {
+        display: flex;
+        flex-wrap: wrap; /* Permitir el ajuste de línea para los ul */
+        
+        flex-direction: none;
+        justify-content: center;
+       
+    }
+
+    .fat-footer {
+        background-color: var(--colorSecundarioLuz1);
+        color: white;
+        padding: 20px;
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+        bottom: 0;
+        position: relative;
+        width: 100%;
+      }
+    
+      .footer-lists {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .top-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row; /* Alinear las listas horizontalmente en escritorio */
+      }
+    
+      /* Estilos para cada lista */
+      .fat-footer ul {
+        list-style-type: none;
+        padding: 0;
+        flex: 1;
+        margin-right: 10px;
+        margin-left: 40px;
+      }
+    
+      .fat-footer li {
+        margin-bottom: 10px;
+      }
+    
+      /* Establecer el color de fondo gris para las <li> excepto la primera */
+      .fat-footer ul li:not(:first-child) {
+        color: var(--colorPlaceholder);
+      }
+    
+      .split {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+    
+      .split-top p {
+        border: var(--colorPrimarioSombra3) solid 5px;
+        height: 50px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .split-top h6 {
+        margin-left: 60px;
+      }
+    
+      .split-top,
+      .split-bottom {
+        padding: 10px;
+        margin-top: 10px;
+      }
+    
+      .split-bottom p {
+        width: 75%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    
+      .bottom-section {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    
+      .left-half {
+        margin-right: 15px;
+      }
+    
+      .right-half {
+        margin-left: 200px;
+      }
+    
+      .left-half,
+      .right-half {
+        margin-right: 10px;
+      }
+    
+      .left-half h6,
+      .split-top h6 {
+        color: var(--colorPlaceholder);
+        margin-top: 10px;
+      }
+
+      /*carrouselllllll*/
+
+      .container{
+        width: 90%;
+        margin-top: 10px ;
+        padding: 10px 40px;
+        height: 310px;
+        overflow-x: hidden;
+      }
+    
+      
+      .swiper-slide {
+        min-height: 300px; 
+      }
+    
+      .container .swiper-slide {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        background-color: var(--colorSecundario);
+        border-radius: 15px;
+        text-align: start;
+    
+       
+       
+      }
+      .container .swiper-slide img{
+        display: block;
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-top-left-radius: 15px;
+         border-top-right-radius: 15px;
+      } 
+    
+    
+      .container .swiper-container{
+        width: 100%;
+        height: 100%;
+      }
+    
+      .card-price {
+      text-align: right;
+    }
+    
+    /* Estilos para el contenedor de acciones */
+    .card-actions-container {
+      display: flex;
+      flex-direction: column; /* Muestra los elementos en una columna */
+      align-items: center; /* Centra horizontalmente los elementos */
+      margin-top: 10px; /* Espacio entre el precio y las acciones */
+    }
+    
+    .card-add {
+      font-size: 14px;
+      color: var(--colorBlancos);
+      margin-top: 5px; /* Espacio entre el precio y el texto "Añadir" */
+    }
+    
+    .card-cart {
+      color: #1d6ce2;
+      font-size: 5px;
+      margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
+    }
+    
+      .swiper-slide .card-description {
+        background-color: var(--colorSecundarioLuz1);
+        color: var(--colorBlancos);
+      }
+    
+    
+      .container .swiper-slide .card-description{
+          padding:1rem 1rem;
+      }
+     
+      .container .swiper-slide .card-link{
+         text-align: center;
+        
+      }
+      .container .swiper-slide .card-link a{
+          text-decoration: none;
+          color: #1d6ce2;
+      }
+      .swiper-button-next {
+        right: 0 !important; 
+        top: calc(50% + -200px) !important; 
+        transform: translateY(-50%) !important; 
+        
+    }
+    
+    
+    
+    .swiper-button-prev {
+        left: 0 !important; /* Mueve la flecha de navegación hacia la izquierda */
+        top: calc(50% + -200px) !important; /* Alinea la flecha ligeramente hacia abajo */
+        transform: translateY(-50%) !important; /* Alinea verticalmente la flecha */
+        /* Puedes ajustar el tamaño y el estilo de la flecha según tus preferencias */
+    }
+    
+    .card-bottom {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        justify-content: flex-end;
+      }
+      
+      /* Estilos para el precio */
+      .card-price-container {
+        text-align:right; /* Alinear el precio al centro */
+        font-size: 14px; /* Tamaño del precio */
+        color: var(--colorBlancos);
+        margin-bottom: 15px; /* Espacio entre el precio y el contenido inferior */
+        
+      }
+    
+      
+    
+     .card-second-price {
+        text-decoration: line-through; /* Evita que el contenido de card-second-price se tache */
+    }
+      .card-description {
+        display: flex;
+        justify-content: space-between; /* Coloca los elementos a los extremos (nombre a la izquierda, div con precio, icono y acción a la derecha) */
+        min-height: 80px; 
+      
+      }
+      
+      .card-title {
+        text-align: left; /* Alinea el nombre a la izquierda */
+      }
+      
+     
+    
+      .card-action-icon-container {
+        display: flex;
+        flex-direction: row; /* Muestra los elementos en una columna */
+        align-items: center; /* Centra horizontalmente los elementos */
+         /* Espacio entre el precio y las acciones */
+      }
+      * Ocupa todo el ancho disponible */
+      
+    
+      
+    
+    
+    
+    /* Estilo para el icono de carrito */
+    .card-cart {
+        color: #1d6ce2; /* Color del icono de carrito */
+        font-size: 5px; /* Tamaño del icono */
+        margin-right: 1px; /* Espacio entre el icono y la palabra "Añadir" */
+    }
+    
+    /* Estilo para el texto "Añadir" */
+    .card-add {
+        display: flex;
+        justify-content: space-between; /* Alinea los elementos al principio y al final */
+        align-items: center; /* Centra verticalmente los elementos */
+        font-size: 14px; /* Tamaño del texto */
+        color: var(--colorBlancos);
+    }
+    
+    
+    
+    
+    .car-icono-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    
+
+    
+}
+
+
+
+
 

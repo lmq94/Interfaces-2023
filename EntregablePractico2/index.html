@@ -5,6 +5,7 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href="styles/style.css">
         <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <title> Home </title>
     </head>
     <body>
@@ -12,13 +13,9 @@
             <nav class="navbar">
                 <div class = "navbar-left">
                     <div class = "user-container">
-                        <a href = "#" class = "menu-toggle">
-                            <i class="fas fa-bars" id="menu-icon"></i>
-                        </a>
-                        
-                        <a href = "#">
-                            <i class = "fab fa-twitch"></i>
-                        </a>
+                        <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/menu.svg" id = "menu-icon"  class="navbar-icono-svg" /></svg>
+                        <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/twitch-logo.svg" class="navbar-icono-svg"  /></svg>
+                       
                         <div class = "menu-container">
                             <div class = "menu-categories-dropdown" id = "menu-dropdown">
                                 <ul>
@@ -38,12 +35,8 @@
                 </div>
                 <div class = "navbar-right">
                     <div class = "user-container">
-                        <a href = "#">
-                            <i class = "fas fa-shopping-cart"></i>
-                        </a>
-                        <a href = "#">
-                            <i class = "fas fa-user" id = "user-icon"></i>
-                        </a>
+                        <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/carrito.svg" class="navbar-icono-svg"  /></svg>
+                        <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/perfil.svg" class="navbar-icono-svg"  id = "user-icon"/></svg>
                         <div class = "menu-container">
                             <div class = "dropdown-user-menu" id = "user-dropdown">
                                 <ul>
@@ -59,59 +52,143 @@
             </nav>
         </header>
 
+        
         <main>
+            <div class = "category-container">
+                <h2>SUGERENCIAS</h2>
+                <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/flame-outline.svg" class="navbar-icono-svg"  id = "user-icon"/></svg>
+    
+            </div>
+    
+            <div class="container">
+                
+                <div class="swiper-container mySwiper mySwiper-1">
+                      
+                    <div class="swiper-wrapper">
+                        <!-- Contenido del primer carrusel -->
+                    </div>
+                 
+                </div>
+            </div>
+
+                <h2>TU BIBLOTECA</h2>
+            
+            <div class="container">
+                
+                <div class="swiper-container mySwiper mySwiper-2">
+                  
+                    <div class="swiper-wrapper">
+                        <!-- Contenido del segundo carrusel -->
+                    </div>
+                   
+                </div>
+            </div>
+            <h2>CARRERA</h2>
+            
+            <div class="container">
+                
+                <div class="swiper-container mySwiper mySwiper-3">
+                   
+                    <div class="swiper-wrapper">
+                        <!-- Contenido del segundo carrusel -->
+                    </div>
+                   
+                </div>
+            </div>
+
+            <h2>GUERRA</h2>
+            <div class="container">
+                
+                <div class="swiper-container mySwiper mySwiper-4">
+                 
+                    <div class="swiper-wrapper">
+                        <!-- Contenido del segundo carrusel -->
+                    </div>
+                   
+                </div>
+            </div>
+
+            <h2>ESTRATEGIA</H2>
+            <div class="container">
+                
+                <div class="swiper-container mySwiper mySwiper-5">
+                  
+                    <div class="swiper-wrapper">
+                        <!-- Contenido del segundo carrusel -->
+                    </div>
+                   
+                </div>
+            </div>
+            
+            <h2>TERROR</H2>
+            <div class="container">
+                
+                <div class="swiper-container mySwiper mySwiper-6">
+                   
+                    <div class="swiper-wrapper">
+                        <!-- Contenido del segundo carrusel -->
+                    </div>
+                   
+                </div>
+            </div>
+            
+            
 
         </main>
-        <footer class = "fat-footer">
-            <div class = "div-izq-footer">
-
-                <div class="sub-div-izq-footer">
-                    <h4> Multiplayer Online Games </h4>
-                    <h4 class = "text-grey"> Number 1 online gaming plataform in the industry </h4>
-                 </div>
-                 <div class = "sub-div-izq-footer">
-                    <h4>Current Games</h4>
-                    <h4 class = "text-grey"> We stay updated and offer the most current games </h4>
-                </div>
-                <div>
-                    <h5> Terms Of Use | Privacy Policy | Trademarks | License Aggrements</h5>
-                    <h6 class = "text-grey"> Copyright 2016, Twitchi Corporation. All Rights Reserved </h6>
-                </div>
-            </div>
-            <div class = "div-mid-footer">
-                <div class = "subdiv-mid-container">
-                    <div class="sub-div">
-                        <p>Quick Links</p>
-                        <ul>
-                            <li class = "text-grey"> Blogs </li>
-                            <li class = "text-grey"> Support </li>
-                            <li class = "text-grey"> Consulting </li>
-                        </ul>
+        
+            <footer class="fat-footer">
+                <div class="top-section">
+        
+                    <ul>
+                        <li>Categories</li>
+                        <li>War</li>
+                        <li>Strategy</li>
+                        <li>Kitchen</li>
+                        <li>Terror</li>
+                        <li>Race</li>
+                        <li>Cards</li>
+                    </ul>
+                    <ul>
+                        <li>Quick Links</li>
+                        <li>Blogs</li>
+                        <li>Support</li>
+                        <li>Consulting</li>
+                    </ul>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Coustumers</li>
+                        <li>Offices</li>
+                        <li>Company</li>
+                    </ul>
+                    <div class="split">
+                        <div class="split-top">
+                            <p>CONTACT US</p>
+                            <h6>1-800-22153103</h6>
+                        </div>
+                        <div class="split-bottom">
+                            <p>Follow on our social network</p>
+                            <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/instagram.svg" class="navbar-icono-svg"  /></svg>
+                            <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/twitter.svg" class="navbar-icono-svg"  /></svg>
+                            <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/facebook.svg" class="navbar-icono-svg"  /></svg>
+                            <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/youtube.svg" class="navbar-icono-svg"  /></svg>
+                        </div>
                     </div>
-                    <div class="sub-div">
-                        <p>About Us</p>
-                        <ul>
-                            <li class = "text-grey"> Customers </li>
-                            <li class = "text-grey"> Offices </li>
-                            <li class = "text-grey"> Company </li>
-                        </ul>
+                </div>
+                <div class="bottom-section">
+                    <div class="left-half">
+                        <h5>Terms Of Use | Privacy Policy | Trademarks | License Aggrements</h5>
+                        <h6>Copyrightn Twitchi Corporation. All Rigths Reserved</h6>
+                    </div>
+                    <div class="right-half">
+                        <h5> Powered by Interfaces de usuario e interaccion </h5>
+                        <div>
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="full-width-subdiv">
-                    <p>Follow on our social networks</p>
-                </div>
-            </div>
-            <div class="div-der-footer">
-                <div class="sub-div">
-                    <p class = "border-purple">CONTACT US</p>
-                    <h6 class = "text-grey" >1-800-22153103 </h6>
-                </div>
-                <div class="sub-div">
-                    <p>Powered by</p>
-                    <p class = "text-grey"> Interfaces de usuario e interaccion </p>
-                </div>
-            </div>
-        </footer>
+            </footer>
+    
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src = "js/scripts.js"></script>
     </body>
 </html>
