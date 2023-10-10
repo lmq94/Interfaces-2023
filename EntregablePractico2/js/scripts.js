@@ -30,7 +30,7 @@ const datosCards1 = [
 
       },
       {
-        imagen: 'assets/images/minecraft.jpg',
+        imagen: 'assets/images/Minecraft.jpg',
         titulo: 'MINECRAFT',
         precioTachado: '$3.99',
         precio: '$2.99',
