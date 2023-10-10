@@ -532,91 +532,96 @@ icono: 'assets/iconos/carrito-vender.svg'
 
 
 
-  function crearTarjetas(swiperContainer, datosCards) {
-        const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
+function crearTarjetas(swiperContainer, datosCards) {
+  const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
 
-        datosCards.forEach((cardData) => {
-          const swiperSlide = document.createElement('div');
-          swiperSlide.classList.add('swiper-slide');
+  datosCards.forEach((cardData) => {
+      const swiperSlide = document.createElement('div');
+      swiperSlide.classList.add('swiper-slide');
 
-          const card = document.createElement('div');
-          card.classList.add('swiper-slide');
+      const card = document.createElement('div');
+      card.classList.add('swiper-slide');
 
-          // Crear la imagen y otros elementos de la tarjeta como en el ejemplo anterior...
-          const cardImage = document.createElement('img');
-          cardImage.classList.add('card-image');
-          cardImage.src = cardData.imagen;
-          cardImage.alt = cardData.titulo;
-          card.appendChild(cardImage);
+      // Crear la imagen y otros elementos de la tarjeta como en el ejemplo anterior...
+      const cardImage = document.createElement('img');
+      cardImage.classList.add('card-image');
+      cardImage.src = cardData.imagen;
+      cardImage.alt = cardData.titulo;
+      card.appendChild(cardImage);
 
-          const cardDescription = document.createElement('div');
-          cardDescription.classList.add('card-description');
+      const cardDescription = document.createElement('div');
+      cardDescription.classList.add('card-description');
 
-          const cardTitle = document.createElement('div');
-          cardTitle.classList.add('card-title');
+      const cardTitle = document.createElement('div');
+      cardTitle.classList.add('card-title');
+
+      // Verificar si el título es "4 EN LINEA"
+      if (cardData.titulo === "4 EN LINEA") {
+          const tituloLink = document.createElement('a');
+          tituloLink.href = 'juego.html'; // Agrega aquí la URL que desees
+          tituloLink.textContent = cardData.titulo;
+          cardTitle.appendChild(tituloLink);
+      } else {
           const titulo = document.createElement('h4');
           titulo.textContent = cardData.titulo;
           cardTitle.appendChild(titulo);
+      }
 
-          cardDescription.appendChild(cardTitle);
+      cardDescription.appendChild(cardTitle);
 
-          const cardBottom = document.createElement('div');
-          cardBottom.classList.add('card-bottom');
+      const cardBottom = document.createElement('div');
+      cardBottom.classList.add('card-bottom');
 
-          // Verificar la acción y agregar precio si es "Añadir" o "Jugar"
-          if (cardData.accion === 'AÑADIR' || cardData.accion === 'JUGAR') {
-            const cardPriceContainer = document.createElement('div');
-            cardPriceContainer.classList.add('card-price-container');
-            
-            
-            if (cardData.accion === 'AÑADIR' && cardData.precioTachado) {
+      // Verificar la acción y agregar precio si es "Añadir" o "Jugar"
+      if (cardData.accion === 'AÑADIR' || cardData.accion === 'JUGAR') {
+          const cardPriceContainer = document.createElement('div');
+          cardPriceContainer.classList.add('card-price-container');
+
+          if (cardData.accion === 'AÑADIR' && cardData.precioTachado) {
               const cardSecondPrice = document.createElement('div');
               cardSecondPrice.classList.add('card-second-price');
               cardSecondPrice.textContent = cardData.precioTachado;
               cardPriceContainer.appendChild(cardSecondPrice);
-            }
-
-            const cardPrice = document.createElement('div');
-            cardPrice.classList.add('card-price');
-            cardPrice.textContent = cardData.precio;
-            cardPriceContainer.appendChild(cardPrice);
-
-            // Opcionalmente, agregar un segundo precio tachado si la acción es "Añadir"
-            
-
-            cardBottom.appendChild(cardPriceContainer);
           }
 
-          const cardActionIconContainer = document.createElement('div');
-          cardActionIconContainer.classList.add('card-action-icon-container');
+          const cardPrice = document.createElement('div');
+          cardPrice.classList.add('card-price');
+          cardPrice.textContent = cardData.precio;
+          cardPriceContainer.appendChild(cardPrice);
 
-          const cardAction = document.createElement('div');
-          cardAction.classList.add('card-add');
-          const accion = document.createElement('p');
-          accion.textContent = cardData.accion;
-          cardAction.appendChild(accion);
+          cardBottom.appendChild(cardPriceContainer);
+      }
 
-          const cardCart = document.createElement('div');
-          cardCart.classList.add('card-cart');
-          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-          const image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-          svg.classList.add('car-icono-svg');
-          image.setAttributeNS('http://www.w3.org/1999/xlink', 'href', cardData.icono);
-          svg.appendChild(image);
-          cardCart.appendChild(svg);
+      const cardActionIconContainer = document.createElement('div');
+      cardActionIconContainer.classList.add('card-action-icon-container');
 
-          cardActionIconContainer.appendChild(cardAction);
-          cardActionIconContainer.appendChild(cardCart);
+      const cardAction = document.createElement('div');
+      cardAction.classList.add('card-add');
+      const accion = document.createElement('p');
+      accion.textContent = cardData.accion;
+      cardAction.appendChild(accion);
 
-          cardBottom.appendChild(cardActionIconContainer);
+      const cardCart = document.createElement('div');
+      cardCart.classList.add('card-cart');
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      const image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+      svg.classList.add('car-icono-svg');
+      image.setAttributeNS('http://www.w3.org/1999/xlink', 'href', cardData.icono);
+      svg.appendChild(image);
+      cardCart.appendChild(svg);
 
-          cardDescription.appendChild(cardBottom);
+      cardActionIconContainer.appendChild(cardAction);
+      cardActionIconContainer.appendChild(cardCart);
 
-          card.appendChild(cardDescription);
-          swiperSlide.appendChild(card);
-          swiperWrapper.appendChild(swiperSlide);
-        });
-      } 
+      cardBottom.appendChild(cardActionIconContainer);
+
+      cardDescription.appendChild(cardBottom);
+
+      card.appendChild(cardDescription);
+      swiperSlide.appendChild(card);
+      swiperWrapper.appendChild(swiperSlide);
+  });
+}
 
 
   
