@@ -513,7 +513,7 @@ icono: 'assets/iconos/carrito-vender.svg'
 
 },
 {
-imagen: 'assets/images/Valorant.jpg',
+imagen: 'assets/images/Chernobylite.jpg',
 precio: '$6.99',
 titulo: 'CHERNOBYLITE',
 accion: 'AÑADIR',
