@@ -326,6 +326,20 @@ input[type="number"]::-webkit-outer-spin-button {
   animation: rotate 2s linear
 }
 
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Aplica la animación solo cuando el cursor está sobre el Botón 2 */
+.button-social-networks:hover {
+  animation: bounce 0.5s ease ; /* Repite la animación infinitamente */
+}
+
 
 /*---------HEADER--------*/
 header {
