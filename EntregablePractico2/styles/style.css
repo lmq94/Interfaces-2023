@@ -292,6 +292,36 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 5px;
 }
 
+@keyframes grow {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Aplica la animación 'grow' al botón */
+.button-register:hover  {
+  animation: grow 1s ; /* Repite la animación infinitamente */
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.button-login:hover{
+  animation: rotate 2s linear
+}
+
 
 /*---------HEADER--------*/
 header {
@@ -374,6 +404,7 @@ nav {
   background-color: var(--colorSecundarioLuz2);
   border: 1px solid var(--colorBlancos);
   width: 150px;
+  margin-bottom: 20px;
   
 }
 
@@ -862,3 +893,4 @@ margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
   width: 20px;
   height: 20px;
 }
+
