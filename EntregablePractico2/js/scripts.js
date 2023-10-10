@@ -664,11 +664,18 @@ icono: 'assets/iconos/carrito-vender.svg'
 
       const rutaActual = window.location.pathname;
 
-
-// Agrega un evento de clic al icono de usuario
         userIcon.addEventListener('click', () => {
-          // Toggle (alternar) la clase 'active' en el menú para mostrarlo u ocultarlo
+   
           userMenu.classList.toggle('active');
+        });
+
+        const menuIcon = document.getElementById('menuIcon');
+        const menu = document.getElementById('menuCategory');
+
+   
+        menuIcon.addEventListener('click', () => {
+ 
+            menu.classList.toggle('active');
         });
 
         

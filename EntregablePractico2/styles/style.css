@@ -362,7 +362,7 @@ nav {
   top: 90%; 
   right: 0; 
   background-color: var(--colorSecundarioLuz2);
-  border: 1px solid #EFEFF1;
+ 
 }
 
 
@@ -384,11 +384,46 @@ nav {
 .user-menu ul li:last-child {
   background-color: var(--colorPrimarioSombra2); 
 }
+
+.container-category {
+  position: relative; 
+  display: inline-block; 
+}
+
+.menu-category {
+  display: none;
+  position: absolute;
+  top: 100%; /* Alinear el menú debajo del icono de hamburguesa */
+  left: 0; /* Alinear el menú a la derecha del icono de hamburguesa */
+  background-color:var(--colorSecundarioLuz2); 
+  border: 1px solid #EFEFF1;
+}
+
+/* Estilo para los elementos de la lista del menú */
+.menu-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-category.active {
+  display: block;
+}
+
+.menu-category li {
+  padding: 10px;
+  display: flex;
+}
+
+.menu-category-svg-icon {
+  width: 15px;
+  height: 15px;
+}
 /*--------MAIN-----------*/
  main{
    
     background-color: var(--colorSecundario);
-    flex-grow: 1;
+    
    
  }
 
