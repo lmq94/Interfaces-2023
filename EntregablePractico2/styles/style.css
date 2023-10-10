@@ -282,6 +282,16 @@ input[type="number"]::-webkit-outer-spin-button {
     border-color: red;
 }
 
+#successMessage {
+  margin-top: 20px;
+  display: none;
+  background-color: var(--colorFree);
+  color: var(--colorBlancos);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
 
 /*---------HEADER--------*/
 header {
@@ -362,7 +372,9 @@ nav {
   top: 90%; 
   right: 0; 
   background-color: var(--colorSecundarioLuz2);
- 
+  border: 1px solid var(--colorBlancos);
+  width: 150px;
+  
 }
 
 
@@ -393,10 +405,10 @@ nav {
 .menu-category {
   display: none;
   position: absolute;
-  top: 100%; /* Alinear el menú debajo del icono de hamburguesa */
+  top: 90%; /* Alinear el menú debajo del icono de hamburguesa */
   left: 0; /* Alinear el menú a la derecha del icono de hamburguesa */
   background-color:var(--colorSecundarioLuz2); 
-  border: 1px solid #EFEFF1;
+  border: 1px solid var(--colorBlancos)
 }
 
 /* Estilo para los elementos de la lista del menú */
@@ -430,6 +442,7 @@ nav {
  main h2{
   color: var(--colorBlancos);
   text-align: center;
+  margin-left: 15px;
  }
 
 .category-container{
