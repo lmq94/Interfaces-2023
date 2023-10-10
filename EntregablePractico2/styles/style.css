@@ -49,6 +49,10 @@ h4{
     font-weight: 500;
 }
 
+p,li{
+    color: var(--colorBlancos);
+}
+
 
 /*--------Login----------*/
 
@@ -302,7 +306,7 @@ nav {
 
 /*--------MAIN-----------*/
  main{
-    height: 500px;
+    padding: 20px;
     background-color: var(--colorSecundario);
  }
 /*-------FOOTER--------*/
@@ -463,4 +467,166 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 5px;
+}
+
+
+/*4 en linea*/
+.game{
+    padding: 25px;
+    height: auto;
+}
+
+.titleGame{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.breadCrumb{
+    display: flex;
+    font-size: 11px;
+    color: var(--colorBlancos);
+}
+
+.titleGame h2{
+    color: var(--colorBlancos);
+    font-size: 18px;
+    border-bottom: 1px solid var(--colorBlancos);
+    width: 135px;
+}  
+
+.containerGame{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 700px;
+    margin-top: 10px;
+}
+
+.gameBox{
+    margin-left: 50px;
+    width: 70%;
+}
+
+.gameBox img {
+    display: block;
+    width: 100%;
+    filter: blur(3px);
+    height: 100%;
+}
+
+.playButton {
+    width: 150px;
+    height: 75px;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #00D700; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px; /* Ajusta el tamaño del texto según tus necesidades */
+}
+
+.playButton:hover {
+    background-color: var(--colorPrimario); /* Cambia el color del botón al pasar el cursor */
+}
+
+aside{
+    width: 10%;
+    height: 100%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+aside img{
+    height:100%
+}
+
+.boxDescription{
+    width: 73%;
+    margin-top: 25px;
+    gap: 25px;
+    display: flex;
+}
+
+.description{
+    width: 640px;
+    gap: 5px;
+    height: auto;
+    background-color: var(--colorSecundarioLuz3);
+    border-radius: 2px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.description h3{
+    color: var(--colorBlancos);
+}
+
+ul li{
+    list-style-type: none;
+}
+iframe{
+    width: 35%;
+    height: inherit;
+}
+
+.containerComentarios{
+    margin-top: 25px;
+    width: 50%;
+    margin: 3% 25%;
+    gap: 15px;
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+}
+.containerComentarios h4{
+    border-bottom: 1px solid var(--colorBlancos);
+}
+
+.inputComentario{
+    /*padding:3px;*/
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    background-color: var(--colorSecundarioLuz3);
+}
+.superior{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:5px;
+}
+
+.superior img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.inputInf input{
+    width: 100%;
+    padding:0px;
+}
+
+.inputComentario p{
+    font-size: 16px;
+    padding: 0px 15px;  
+    height: 30px;
+}
+
+.superior h5{
+    color:var(--colorBlancos);
 }
