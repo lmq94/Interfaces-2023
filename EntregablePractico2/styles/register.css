@@ -85,6 +85,7 @@
     }
 
     .btn-field button, .boxLogin button{
+        margin-top: 40px;
         flex-basis: 48%;
         font-size: 16px;
         background-color: var(--colorPrimarioSombra2);

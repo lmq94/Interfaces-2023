@@ -335,7 +335,8 @@ nav {
 }
 
 .searchInput {
-    width: 60%;
+    width: 30px;
+    height: 50%;
     padding: 10px 30px 10px 10px;
     border: 0.5px solid var(--colorPlaceholder);
     border-radius: 4px;
@@ -377,6 +378,7 @@ background-color: var(--colorSecundarioLuz2);
 border: 1px solid var(--colorBlancos);
 width: 150px;
 margin-bottom: 20px;
+z-index: 1000;
 
 }
 
@@ -411,7 +413,8 @@ position: absolute;
 top: 90%; /* Alinear el menú debajo del icono de hamburguesa */
 left: 0; /* Alinear el menú a la derecha del icono de hamburguesa */
 background-color:var(--colorSecundarioLuz2); 
-border: 1px solid var(--colorBlancos)
+border: 1px solid var(--colorBlancos);
+z-index: 1000;
 }
 
 /* Estilo para los elementos de la lista del menú */
@@ -437,96 +440,48 @@ height: 15px;
 /*--------MAIN-----------*/
 main{
 
- 
-
-  padding: 20px;
-
   background-color: var(--colorSecundario);
-  
  
 }
 
+
+
 main h2{
-color: var(--colorBlancos);
-text-align: center;
-margin-left: 15px;
+  margin-top: 10px;
+  color: var(--colorBlancos);
+  text-align: center;
+  margin-left: 15px;
+}
+
+.div-enlaces {
+  margin-top: 10px;
+  color: blue; /* Cambia el color del texto a azul */
+  text-decoration: none; /* Elimina la subrayado por defecto de los enlaces */
+}
+
+.div-enlaces a {
+  color: blue; /* Cambia el color de los enlaces a azul */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 .category-container{
 margin-top: 30px;
+height: 30px;
 display: flex;
 }
-/*-------FOOTER--------*/
-footer {
 
-bottom: 0;
-width: 100%;
-background-color: var(--colorSecundarioLuz1); /* Puedes ajustar el color de fondo según tus preferencias */
-padding: 20px; /* Puedes ajustar el espacio interior del footer según tus preferencias */
-margin-top: 20px;
+.category-container h2{
+  margin-bottom: 10px;
+}
+/*-------FOOTER--------*/
+
+footer{
+  background-color: var(--colorSecundarioLuz1);
 }
 
 @media screen and (min-width: 620px) {
 /* Cambia la dirección de flexión para mostrar el footer como una fila */
-footer .mainFooter {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-}
 
-/* Estilos para las clases dentro de "mainFooter" en resoluciones más grandes */
-footer .mainFooter .column {
-  width: 30%; /* O ajusta el ancho según tus necesidades */
-  margin: 0; /* Elimina el margen vertical entre las columnas */
-}
-
-footer .mainFooter .contact {
-  flex: 1; /* Permite que el contenedor de contacto ocupe el espacio restante */
-}
-
-.mainFooter .footerLinks{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 50%;
-  height: 70%;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  }
-
-  footer .terminos{
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    margin: 0% 15%;
-    justify-content: space-around;
-    gap:10px;
-    text-align: center;
-    align-items: center;
-
-  }
-
-
-  .column{
-    display: flex;
-    width: 30%;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-
-    
-}
-
-  .terminos .box2{
-
-    margin-right: 200px;
-
-    
-
-
-  }
 
   main h2{
     color: var(--colorBlancos);
@@ -695,9 +650,9 @@ gap: 5px;
 
 
 .container{
-width: 90%;
+width: 99%;
 margin-top: 10px ;
-padding: 10px 40px;
+padding: 10px 10px;
 height: 310px;
 overflow-x: hidden;
 overflow-y: hidden;
@@ -762,6 +717,16 @@ margin-top: 5px; /* Espacio entre el precio y el texto "Añadir" */
 color: #1d6ce2;
 font-size: 5px;
 margin-top: 5px; /* Espacio entre el texto "Añadir" y el icono del carrito */
+}
+
+.card-clicked {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.card-clicked:hover {
+  transform: scale(1);
+  transition: transform 0.3s;
 }
 
 .swiper-slide .card-description {
@@ -1073,17 +1038,6 @@ nav {
   justify-content: center;
 }
 
-.searchInput {
-  width: 60%;
-  padding: 10px 30px 10px 10px;
-  border: 0.5px solid var(--colorPlaceholder);
-  border-radius: 4px;
-  font-size: 14px;
-  background-color: transparent;
-  color: var(--colorPlaceholder);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  outline: none;
-}
 
 .searchInput::placeholder {
   color: var(--colorPlaceholder); 
@@ -1095,3 +1049,4 @@ nav {
   align-items: center;
   gap: 5px; 
   height: 25px;
+}

@@ -1,6 +1,8 @@
 
 
 
+
+
 const userIcon = document.getElementById('user-icon');
 const userDropdown = document.getElementById('user-dropdown');
 const menuIcon = document.getElementById("menu-icon");
@@ -623,6 +625,13 @@ function crearTarjetas(swiperContainer, datosCards) {
   });
 }
 
+const cards = document.querySelectorAll('.card');
+cards.forEach((card) => {
+  card.addEventListener('click', () => {
+    card.classList.add('card-clicked');
+  });
+});
+
 
   
       function crearConfiguracionCarrusel(nextButtonSelector, prevButtonSelector) {
@@ -742,8 +751,11 @@ function crearTarjetas(swiperContainer, datosCards) {
     
   
       const carrusel = new Swiper(configuracion.containerSelector, {
-          ...crearConfiguracionCarrusel(configuracion.nextButtonSelector, configuracion.prevButtonSelector)
-      });
+          ...crearConfiguracionCarrusel(configuracion.nextButtonSelector, configuracion.prevButtonSelector),
+        
+    });
+     
+
       crearTarjetas(carrusel.el, configuracion.datosCards);
 
       carrusel.on('slideChangeTransitionStart', () => {
