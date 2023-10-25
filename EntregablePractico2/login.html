@@ -9,32 +9,33 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container">
-        <div class="form-content">
-            <h2 id="title">Login</h2>
-            <form action="">
-                <div class="input-group">
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>  
-                        <input type="text" placeholder="Email">
+    <main>
+        <div class="formContainer">
+            <div class="formContent">
+                <h1 class="title">Login</h1>
+                <form id="login" action="">
+                    <div class="inputField">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>  
                         <input type="text" placeholder="Password">
                     </div>
+                    <div class="btnField">
+                        <button id="signIn">Sign In</button>
+                    </div>
+                </form>
+            </div>
+            <div class="signSocial">
+                <p>Or Sign In with</p>
+                <div class="social-buttons">
+                    <a href="#" class="facebook-button">
+                        <i class="fa-brands fa-facebook"></i> Sign in with Facebook
+                    </a>
+                    <a href="#" class="google-button">
+                        <i class="fa-brands fa-google"></i> Sign in with Google
+                    </a>
                 </div>
-                <div class="btn-field">
-                    <button id="btn-signUp" class="bounce-top"><a href="index.html"> Sign In</a></button>
-                </div>
-            </form> 
-            <div class="boxSocial">
-                <p>Or Sign In with..</p>
-                <button class="facebook">
-                    <i class="fa-brands fa-facebook"></i> Sign in with Facebook
-                </button>
-                <button class="google">
-                    <i class="fa-brands fa-google"></i> Sign in with Google
-                </button>
             </div>
             
         </div>

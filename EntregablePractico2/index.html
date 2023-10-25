@@ -6,35 +6,171 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Home</title>
 </head>
 <body>
+    
+    <div class="loading-container" id="loadingContainer">
+        <div class="spinner"></div>
+        <p>Cargando...</p>
+    </div>
     <header>
         <nav>
             <div class="left">
-                <ul>
-                    <li>
-                        <img src="assets/iconos/menu.png" alt="">
-                        <ul class="subMenu">
-                            <li>Sub 1</li>
-                            <li>Sub 2</li>
-                            <li>Sub 3</li>
+                <div class="container-category">
+                    <svg width="27" height="50" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" id="menuIcon">
+                        <path d="M4.375 26.25H23.3333V23.3333H4.375V26.25ZM4.375 18.9583H18.9583V16.0417H4.375V18.9583ZM4.375 8.75V11.6667H23.3333V8.75H4.375ZM30.625 22.7354L25.4042 17.5L30.625 12.2646L28.5688 10.2083L21.2771 17.5L28.5688 24.7917L30.625 22.7354Z" fill="#EFEFF1"/>
+                    </svg>
+                    <div class="menu-category" id="menuCategory">
+                        <ul>
+                            <li>
+                                <svg class = "menu-category-svg-icon" ><image xlink:href="assets/iconos/accion.svg" class="menu-category-svg-icon" /></svg>
+                                <a href="#">Accion</a>
+                            </li>
+                            <li>
+                                <svg class = "menu-category-svg-icon" ><image xlink:href="assets/iconos/guerra.svg" class="menu-category-svg-icon" /></svg>
+                                <a href="#">Guerra</a>
+                            </li>
+                            <li>
+                                <svg class = "menu-category-svg-icon" ><image xlink:href="assets/iconos/estrategia.svg" class="menu-category-svg-icon" /></svg>
+                                <a href="#">Estrategia</a>
+                            </li>
+                            <li>
+                                <svg class = "menu-category-svg-icon" ><image xlink:href="assets/iconos/terror.svg" class="menu-category-svg-icon" /></svg>
+                                <a href="#">Terror</a>
+                            </li>
+                            <li>
+                                <svg class = "menu-category-svg-icon" ><image xlink:href="assets/iconos/carreras.svg" class="menu-category-svg-icon" /></svg>
+                                <a href="#">Carreras</a>
+                            </li>
                         </ul>
-                    </li>
-                    <li>
-                        <img src="assets/iconos/twi.png" alt="">
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <svg width="31" height="35" viewBox="0 0 31 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_495_514)">
+                    <path d="M27.5916 16.25L22.5749 21.25H17.5582L13.1686 25.625V21.25H7.5249V2.5H27.5916V16.25Z" fill="white"/>
+                    <path d="M6.27083 0L0 6.25V28.75H7.525V35L13.7958 28.75H18.8125L30.1 17.5V0H6.27083ZM27.5917 16.25L22.575 21.25H17.5583L13.1687 25.625V21.25H7.525V2.5H27.5917V16.25Z" fill="#9146FF"/>
+                    <path d="M23.8291 6.875H21.3208V14.375H23.8291V6.875Z" fill="#9146FF"/>
+                    <path d="M16.9312 6.875H14.4229V14.375H16.9312V6.875Z" fill="#9146FF"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_495_514">
+                    <rect width="30.1" height="35" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>                    
             </div>
             <div class="center">
 
             </div>
             <div class="rigth">
-
+                <svg width="27" height="50" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <path d="M12.0312 29.5312C12.6353 29.5312 13.125 29.0416 13.125 28.4375C13.125 27.8334 12.6353 27.3438 12.0312 27.3438C11.4272 27.3438 10.9375 27.8334 10.9375 28.4375C10.9375 29.0416 11.4272 29.5312 12.0312 29.5312Z" stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27.3438 29.5312C27.9478 29.5312 28.4375 29.0416 28.4375 28.4375C28.4375 27.8334 27.9478 27.3438 27.3438 27.3438C26.7397 27.3438 26.25 27.8334 26.25 28.4375C26.25 29.0416 26.7397 29.5312 27.3438 29.5312Z" stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.28125 5.46875H7.65625L10.9375 24.0625H28.4375" stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.9375 19.6875H27.9891C28.1155 19.6876 28.2381 19.6438 28.336 19.5637C28.4338 19.4835 28.5009 19.372 28.5257 19.2479L30.4944 9.4042C30.5103 9.32482 30.5084 9.24291 30.4888 9.16437C30.4692 9.08584 30.4324 9.01263 30.381 8.95004C30.3297 8.88746 30.2651 8.83705 30.1919 8.80245C30.1187 8.76786 30.0388 8.74994 29.9578 8.75H8.75" stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="user-menu-container">
+                    <svg width="27" height="50" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" id="userIcon">
+                        <path d="M23.5154 9.84377C23.2474 13.4579 20.5076 16.4063 17.4998 16.4063C14.4919 16.4063 11.7473 13.4586 11.4841 9.84377C11.2107 6.08399 13.8767 3.28125 17.4998 3.28125C21.1228 3.28125 23.7888 6.15235 23.5154 9.84377Z" stroke="#EFEFF1" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.5002 20.7813C11.5529 20.7813 5.51677 24.0625 4.39978 30.2559C4.26511 31.0024 4.68757 31.7188 5.46892 31.7188H29.5314C30.3134 31.7188 30.7359 31.0024 30.6012 30.2559C29.4836 24.0625 23.4474 20.7813 17.5002 20.7813Z" stroke="#EFEFF1" stroke-width="2.1875" stroke-miterlimit="10"/>
+                    </svg>
+    
+                    <div class="user-menu" id="userMenu">
+                        <!-- Contenido del menú desplegable aquí -->
+                        <ul>
+                          <li><a href="#">Mi Perfil</a></li>
+                          <li><a href="#">Amigos</a></li>
+                          <li><a href="login.html">Cambiar de cuenta</a></li>
+                          <li><a href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </div> 
+                </div>                                 
             </div>
         </nav>
     </header>   
     <main>
+        <div class = "category-container">
+            <h2>SUGERENCIAS</h2>
+            <svg class="navbar-icono-svg"><image xlink:href="assets/iconos/flame-outline.svg" class="navbar-icono-svg" /></svg>
+
+        </div>
+
+        <div class="container">
+            
+            
+            <div class="swiper-container mySwiper mySwiper-1">
+                
+                  
+                <div class="swiper-wrapper">
+                    <!-- Contenido del primer carrusel -->
+                </div>
+             
+            </div>
+        </div>
+
+            <h2>TU BIBLOTECA</h2>
+        
+        <div class="container">
+            
+            <div class="swiper-container mySwiper mySwiper-2">
+              
+                <div class="swiper-wrapper">
+                    <!-- Contenido del segundo carrusel -->
+                </div>
+               
+            </div>
+        </div>
+        <h2>CARRERA</h2>
+        
+        <div class="container">
+            
+            <div class="swiper-container mySwiper mySwiper-3">
+               
+                <div class="swiper-wrapper">
+                    <!-- Contenido del segundo carrusel -->
+                </div>
+               
+            </div>
+        </div>
+
+        <h2>GUERRA</h2>
+        <div class="container">
+            
+            <div class="swiper-container mySwiper mySwiper-4">
+             
+                <div class="swiper-wrapper">
+                    <!-- Contenido del segundo carrusel -->
+                </div>
+               
+            </div>
+        </div>
+
+        <h2>ESTRATEGIA</H2>
+        <div class="container">
+            
+            <div class="swiper-container mySwiper mySwiper-5">
+              
+                <div class="swiper-wrapper">
+                    <!-- Contenido del segundo carrusel -->
+                </div>
+               
+            </div>
+        </div>
+        
+        <h2>TERROR</H2>
+        <div class="container">
+            
+            <div class="swiper-container mySwiper mySwiper-6">
+               
+                <div class="swiper-wrapper">
+                    <!-- Contenido del segundo carrusel -->
+                </div>
+               
+            </div>
+        </div>
         <div class="categorieContainer">
             <div class="head">
                 <p id="sugerencia">Sugerencias</p>
@@ -126,6 +262,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src = "js/scripts.js"></script>
+    
 </body>
 </html>
-    
