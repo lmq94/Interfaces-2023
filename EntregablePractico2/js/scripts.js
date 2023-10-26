@@ -9,100 +9,8 @@ const menuIcon = document.getElementById("menu-icon");
 const menuDropdown = document.getElementById("menu-dropdown");
 
 
-const datosCards1 = [
-        {
-        imagen: 'assets/images/Gta-V.jpg',
-        titulo: 'GTA V',
-        precio: '$5.99',
-        accion: 'AÑADIR',
-        icono: 'assets/iconos/carrito-vender.svg'
-      },
-      {
-        imagen: 'assets/images/Los-Simpson.jpg',
-        titulo: '4 EN LINEA',
-        accion: 'JUGAR',
-        icono: 'assets/iconos/play.svg'
-      },
-    
-      {
-        imagen: 'assets/images/Dota 2.jpg',
-        titulo: 'DOTA II',
-        accion: 'JUGAR',
-        icono: 'assets/iconos/play.svg'
 
-      },
-      {
-        imagen: 'assets/images/Minecraft.jpg',
-        titulo: 'MINECRAFT',
-        precioTachado: '$3.99',
-        precio: '$2.99',
-        accion: 'AÑADIR',
-        icono: 'assets/iconos/carrito-vender.svg'
-
-      },
-      {
-        imagen: 'assets/images/Chess.jpg',
-        titulo: 'CHESS',
-        accion: 'JUGAR',
-        icono: 'assets/iconos/play.svg'
-
-      },
-     {
-      imagen: 'assets/images/Counter-Strike-Go.jpg',
-      titulo: 'COUNTER STRIKE GO',
-      accion: 'JUGAR',
-      icono: 'assets/iconos/play.svg'
-
-    },
-    {
-      imagen: 'assets/images/Dawnlands.jpg',
-      titulo: 'Dawnlands',
-      accion: 'JUGAR',
-      icono: 'assets/iconos/play.svg'
-
-    },
-    {
-      imagen: 'assets/images/Resident-Evil-4-Remake.jpg',
-      titulo: 'RESIDENT EVIL 4 REMAKE',
-      precio: '$10.99',
-      accion: 'AÑADIR',
-      icono: 'assets/iconos/carrito-vender.svg'
-
-    },{
-      imagen: 'assets/images/Fifa-2023.jpg',
-      precio: '$7.99',
-      titulo: 'FIFA 2023',
-      accion: 'AÑADIR',
-      icono: 'assets/iconos/carrito-vender.svg'
-
-    },
-    {
-      imagen: 'assets/images/Hatred.jpg',
-      titulo: 'HATRED',
-      accion: 'AÑADIR',
-      precioTachado: '$2.99',
-      precio: '$1.99',
-      icono: 'assets/iconos/carrito-vender.svg'
-
-    },
-    {
-      imagen: 'assets/images/Path-Of-Exile.jpg',
-      titulo: 'PATH OF EXILE',
-      accion: 'JUGAR',
-      icono: 'assets/iconos/play.svg'
-
-    },
-    {
-      imagen: 'assets/images/Valorant.jpg',
-      titulo: 'VALORANT',
-      accion: 'JUGAR',
-      icono: 'assets/iconos/play.svg'
-
-    },
- 
-
-  ];
-  const datosCards2 = [
+  const datosCards1 = [
     {
     imagen: 'assets/images/Proyect-Zomboid.jpg',
     titulo: 'PROYECT ZOMBOID',
@@ -133,7 +41,7 @@ const datosCards1 = [
 ];
 
 
-const datosCards3 = [
+const datosCards2 = [
   {
   imagen: 'assets/images/Dirty-Rally-2.0.jpg',
   titulo: 'DIRTY RALLY 2.0',
@@ -235,7 +143,7 @@ icono: 'assets/iconos/carrito-vender.svg'
 
 
 ];
-const datosCards4 = [
+const datosCards3 = [
   {
   imagen: 'assets/images/Medal-Of-Honor-Allied-Assault.png',
   titulo: 'MEDAL OF HONOR ALLIED ASSAULT',
@@ -329,7 +237,7 @@ icono: 'assets/iconos/carrito-vender.svg'
 
 
 ];
-const datosCards5 = [
+const datosCards4 = [
   {
   imagen: 'assets/images/Age-Of-Empires-2.jpg',
   titulo: 'AGE OF EMPIRES DEFINITIVE EDITION',
@@ -427,7 +335,7 @@ icono: 'assets/iconos/play.svg'
 
 ];
 
-const datosCards6 = [
+const datosCards5 = [
   {
   imagen: 'assets/images/Fear-2.jpg',
   titulo: 'FEAR 2',
@@ -707,41 +615,36 @@ cards.forEach((card) => {
      
   
       const carruselConfiguraciones = [
+     
         {
             containerSelector: '.mySwiper-1',
-            nextButtonSelector: '.swiper-button-next-1', // Selector único para el primer carrusel
-            prevButtonSelector: '.swiper-button-prev-1', // Selector único para el primer carrusel
+            nextButtonSelector: '.swiper-button-next-1', // Selector único para el segundo carrusel
+            prevButtonSelector: '.swiper-button-prev-1', // Selector único para el segundo carrusel
             datosCards: datosCards1
         },
         {
-            containerSelector: '.mySwiper-2',
-            nextButtonSelector: '.swiper-button-next-2', // Selector único para el segundo carrusel
-            prevButtonSelector: '.swiper-button-prev-2', // Selector único para el segundo carrusel
-            datosCards: datosCards2
-        },
+          containerSelector: '.mySwiper-2',
+          nextButtonSelector: '.swiper-button-next-2', // Selector único para el segundo carrusel
+          prevButtonSelector: '.swiper-button-prev-2', // Selector único para el segundo carrusel
+          datosCards: datosCards2
+      },
         {
           containerSelector: '.mySwiper-3',
           nextButtonSelector: '.swiper-button-next-3', // Selector único para el segundo carrusel
           prevButtonSelector: '.swiper-button-prev-3', // Selector único para el segundo carrusel
           datosCards: datosCards3
       },
-        {
-          containerSelector: '.mySwiper-4',
-          nextButtonSelector: '.swiper-button-next-4', // Selector único para el segundo carrusel
-          prevButtonSelector: '.swiper-button-prev-4', // Selector único para el segundo carrusel
-          datosCards: datosCards4
-      },
       {
-        containerSelector: '.mySwiper-5',
-        nextButtonSelector: '.swiper-button-next-5', // Selector único para el segundo carrusel
-        prevButtonSelector: '.swiper-button-prev-5', // Selector único para el segundo carrusel
-        datosCards: datosCards5
+        containerSelector: '.mySwiper-4',
+        nextButtonSelector: '.swiper-button-next-4', // Selector único para el segundo carrusel
+        prevButtonSelector: '.swiper-button-prev-4', // Selector único para el segundo carrusel
+        datosCards: datosCards4
     },
     {
-      containerSelector: '.mySwiper-6',
-      nextButtonSelector: '.swiper-button-next-6', // Selector único para el segundo carrusel
-      prevButtonSelector: '.swiper-button-prev-6', // Selector único para el segundo carrusel
-      datosCards: datosCards6
+      containerSelector: '.mySwiper-5',
+      nextButtonSelector: '.swiper-button-next-5', // Selector único para el segundo carrusel
+      prevButtonSelector: '.swiper-button-prev-5', // Selector único para el segundo carrusel
+      datosCards: datosCards5
   }
     ];
     
