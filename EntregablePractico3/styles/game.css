@@ -1,0 +1,75 @@
+.game{
+    padding: 5px 18px;
+}
+
+.breadcrumb{
+    margin-top: 10px;
+    display: flex;
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: var(--colorBlancos);
+}
+.breadcrumb a{
+    color: var(--colorBlancos);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover{
+    color: var(--colorPrimarioLuz1);
+}
+
+.titleGame{
+    margin-top: 5px;
+    margin-bottom:20px;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--colorBlancos);
+    width: auto;
+}
+
+.titleGame p{
+    border-bottom: 1px solid white;
+    width: 190px;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+}
+canvas{
+    width: 900px;
+    height: 500px;
+    background-color: aqua;
+}
+
+.gameInfoContainer{
+    margin-top: 30px;
+    width: 79%;
+    display: flex;
+    height: 175px;
+    justify-content: space-between;
+    margin-left:5%;
+}
+
+.instructions{
+    width: 55%;
+    background-color: var(--colorSecundarioLuz1);
+    padding: 10px;
+}
+
+iframe{
+    width: 27%;
+    height: 100%;
+}
+
+.instructions p{
+    color: var(--colorBlancos);
+    font-size: 14px;
+}
+
+.instructions h4{
+    color: var(--colorBlancos);
+    font-size: 26px;
+}
