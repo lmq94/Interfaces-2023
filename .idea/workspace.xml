@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d6d4503-0035-4f1b-a2f7-7477192ed3d7" name="Changes" comment="Dejo la 2da parte en su estado original">
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/antique.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-gryffindor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-hufflepuff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-ravenclaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-slytherin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/fondo_oscuridad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/fondotablero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/gryffindor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/home2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/hufflepuff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ravenclaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/restart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/restart2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/slytherin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/sombrero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/boton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/casilla.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/ficha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/indicador.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/juego.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/jugador.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/principal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/tablero.js" afterDir="false" />
+    <list default="true" id="5d6d4503-0035-4f1b-a2f7-7477192ed3d7" name="Changes" comment="Subo avances con la tercera entrega">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntregablePractico3/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/EntregablePractico3/juego.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntregablePractico3/js/principal.js" beforeDir="false" afterPath="$PROJECT_DIR$/EntregablePractico3/js/principal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EntregablePractico3/styles/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/EntregablePractico3/styles/game.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,22 +33,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/lukesh/Documentos/Repos/lmq94.github.io/EntregablePractico3/assets/juegoImagenes",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/lukesh/Documentos/Repos/lmq94.github.io/EntregablePractico3/assets/juegoImagenes&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/EntregablePractico3/assets/juegoImagenes" />
@@ -93,7 +68,8 @@
       <workItem from="1699997238184" duration="1092000" />
       <workItem from="1700068423840" duration="600000" />
       <workItem from="1700082722536" duration="651000" />
-      <workItem from="1700522458296" duration="6590000" />
+      <workItem from="1700522458296" duration="7014000" />
+      <workItem from="1700580887697" duration="1072000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor index.html">
       <option name="closed" value="true" />
@@ -135,7 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699997721612</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Subo avances con la tercera entrega">
+      <option name="closed" value="true" />
+      <created>1700530354273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700530354273</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Subo avances con la tercera entrega">
+      <option name="closed" value="true" />
+      <created>1700530493776</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700530493776</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +137,7 @@
     <MESSAGE value="Refactor index.html" />
     <MESSAGE value="General refactor" />
     <MESSAGE value="Dejo la 2da parte en su estado original" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dejo la 2da parte en su estado original" />
+    <MESSAGE value="Subo avances con la tercera entrega" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subo avances con la tercera entrega" />
   </component>
 </project>

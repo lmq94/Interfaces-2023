@@ -130,8 +130,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         //evento mouseDown para trackear clicks en fichas y botones
         function mouseDown(e) {
-            let x = e.layerX - e.target.offsetLeft;
-            let y = e.layerY - e.target.offsetTop;
+
+            let rect = e.target.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
             if (boton_jugar.isPointInside(x,y) && modo_seleccionado) {
                 canvas.removeEventListener('mousedown', mouseDown);
                 initGame(crearTablero(), ficha_j1_seleccionada, ficha_j2_seleccionada);
@@ -224,8 +226,9 @@ window.addEventListener('DOMContentLoaded', () => {
         //Evento mouseDown para seleccionar fichas y botones
         //Checkea que la partida no haya terminado y selecciona y guarda la pos original de la ficha clickeada
         function mouseDown(e) {
-            let x = e.layerX - e.target.offsetLeft;
-            let y = e.layerY - e.target.offsetTop;
+            let rect = e.target.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
             let indiceFicha;
             for (let i = 0; i < tablero.jugadorActual.fichas.length; i++) {
                 if (tablero.jugadorActual.fichas[i].isSelected(x, y) && tablero.jugadorActual.tiempo > 0
@@ -250,11 +253,11 @@ window.addEventListener('DOMContentLoaded', () => {
         function mouseUp(e) {
             isMouseDown = false;
             if (fichaClickeada != null) {
-                let x = e.layerX - e.target.offsetLeft;
-                let y = e.layerY - e.target.offsetTop;
-                for(let i = 0; i < tablero.ancho; i++) {
-                    if (tablero.indicadores[i].isPointInside(x,y) && tablero.jugadorActual.tiempo > 0
-                        && tablero.juegoEnCurso) {
+                let rect = e.target.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                for (let i = 0; i < tablero.ancho; i++) {
+                    if (tablero.indicadores[i].isPointInside(x, y) && tablero.jugadorActual.tiempo > 0 && tablero.juegoEnCurso) {
                         tablero.colocarFicha(fichaClickeada, i);
                         if (tablero.jugadores[0].fichas.includes(fichaClickeada))
                             tablero.jugadores[0].fichas.splice(tablero.jugadores[0].fichas.indexOf(fichaClickeada), 1);
@@ -273,10 +276,11 @@ window.addEventListener('DOMContentLoaded', () => {
         //si la ficha se trata de sacar del canvas, la devuelve a su posicion original
         function mouseMove(e) {
             if (isMouseDown && fichaClickeada != null) {
-                let x = e.layerX - e.target.offsetLeft;
-                let y = e.layerY - e.target.offsetTop;
+                let rect = e.target.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
                 fichaClickeada.setPos(x, y);
-                if (y > canvas.height || x > canvas.width || y < canvas.offsetTop || x < canvas.offsetLeft) {
+                if (y > canvas.height || x > canvas.width || y < 0 || x < 0) {
                     fichaClickeada.setPos(coordOriginalFichaX, coordOriginalFichaY);
                     isMouseDown = false;
                 }
