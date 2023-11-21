@@ -34,9 +34,10 @@
     width: 190px;
 }
 
-.gameContainer{
+.game-Container{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 canvas{
     width: 900px;

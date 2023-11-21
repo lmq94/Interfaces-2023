@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/game.css">
-    <title>4 in line</title>
+    <title>Homero vs Bart</title>
 </head>
 <body>
 <header>
@@ -113,32 +114,21 @@
         </div>
     </nav>
 </header>
-<main class="game">
-    <div class="breadcrumb">
-        <a href="index.html">Home </a>
-        <p> -> Strategy -> Bart vs. Homer</p>
-    </div>
-    <div class="titleGame">
-        <p>Bart vs. Homer</p>
-    </div>
-    <div class="gameContainer">
-        <canvas>
+<div class="title">
+    <p>The Simpsons In Line</p>
+    <ul><li>Home -></li>
+        <li>Strategy -></li>
+        <li> The Simpsons In Line</li></ul>
+</div>
 
-        </canvas>
-    </div>
-    <section class="gameInfoContainer">
-        <div class="instructions">
-            <h4>¿Como jugar?</h4>
-            <p>Los jugadores deben elegir su personaje y formato de juego</p>
-            <p>Cada jugador tiene un tiempo limitado para insertar su ficha</p>
-            <p>Se debe colocar la ficha sobre la parte superior del tablero y dejarla caer hasta el fondo disponible del tablero</p>
-            <p>El jugador que consiga la alineacion vertical,horizontal o diagonal de sus fichas de manera consecutivas,gana(La cantidad de fichas consecutivas depende del formato elegido en el menu principal)</p>
-        </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/V3V4TFkmiZY?si=ZMCTgDvqtfjLBssN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
+<main class="container">
 
+    <div class="game-Container">
+        <canvas id="canvas" width="900" height="500"></canvas>
+    </div>
 
 </main>
+
 <footer>
     <div class="mainFooter">
         <div class="footerLinks"> <!--Contenedor de los links-->
@@ -195,6 +185,18 @@
         </div>
     </div>
 </footer>
-<script src="js/index.js"></script>
+
+
+
+<script src="js/indicador.js"></script>
+<script src="js/boton.js"></script>
+<script src="js/casilla.js"></script>
+<script src="js/jugador.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/tablero.js"></script>
+<script src="js/juego.js"></script>
+<script src="js/game.js"></script>
+<script src="js/principal.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
 </body>
 </html>

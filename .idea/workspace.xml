@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d6d4503-0035-4f1b-a2f7-7477192ed3d7" name="Changes" comment="Dejo la 2da parte en su estado original" />
+    <list default="true" id="5d6d4503-0035-4f1b-a2f7-7477192ed3d7" name="Changes" comment="Dejo la 2da parte en su estado original">
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/antique.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-gryffindor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-hufflepuff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-ravenclaw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ficha-slytherin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/fondo_oscuridad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/fondotablero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/gryffindor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/home2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/hufflepuff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/ravenclaw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/restart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/restart2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/slytherin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/assets/juegoImages/sombrero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/boton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/casilla.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/ficha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/indicador.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/juego.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/jugador.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/principal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EntregablePractico3/js/tablero.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntregablePractico3/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/EntregablePractico3/juego.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EntregablePractico3/styles/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/EntregablePractico3/styles/game.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -29,22 +58,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/lukesh/Documentos/Repos/lmq94.github.io&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/lukesh/Documentos/Repos/lmq94.github.io/EntregablePractico3/assets/juegoImagenes",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EntregablePractico3/assets/juegoImagenes" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +91,9 @@
       <workItem from="1699887562895" duration="9569000" />
       <workItem from="1699996529634" duration="679000" />
       <workItem from="1699997238184" duration="1092000" />
+      <workItem from="1700068423840" duration="600000" />
+      <workItem from="1700082722536" duration="651000" />
+      <workItem from="1700522458296" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor index.html">
       <option name="closed" value="true" />
