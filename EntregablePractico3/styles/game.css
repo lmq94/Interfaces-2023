@@ -20,18 +20,17 @@
     color: var(--colorPrimarioLuz1);
 }
 
-.titleGame{
-    margin-top: 5px;
-    margin-bottom:20px;
-    font-size: 26px;
-    font-weight: 500;
+.title{
+    margin: 25px 0px;
+    height: 60px;
+    padding-left: 75px;
     color: var(--colorBlancos);
-    width: auto;
 }
 
-.titleGame p{
+.title h3{
     border-bottom: 1px solid white;
     width: 190px;
+    height: 50%;
 }
 
 .game-Container{
@@ -40,7 +39,7 @@
     align-items: center;
 }
 canvas{
-    margin-top: 70px;
+   
     width: 900px;
     height: 500px;
     background-color: aqua;
@@ -56,8 +55,17 @@ canvas{
 }
 
 .instructions{
-    width: 55%;
-    background-color: var(--colorSecundarioLuz1);
+    margin-top: 20px;
+    width: 70%;
+    margin: 3% 15%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.boxInstructions{
+    width: 50%;
+    background-color: var(--colorSecundarioLuz2);
     padding: 10px;
 }
 
@@ -71,7 +79,13 @@ iframe{
     font-size: 14px;
 }
 
-.instructions h4{
+.instructions h5{
     color: var(--colorBlancos);
     font-size: 26px;
+}
+
+.title ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
 }

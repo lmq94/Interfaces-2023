@@ -10,7 +10,7 @@ class Casilla {
         let posXrect = x + ((canvasWidth - columna) / 2);
         let posYrect = y + (this.size / 2) + ((canvasHeight - fila) / 2);
         ctx.rect(posXrect, posYrect, this.size, this.size);
-        ctx.fillStyle = "#783305"
+        ctx.fillStyle = "#2C4770"
         ctx.lineWidth = 1;
         ctx.strokeStyle = "black";
         ctx.fill();

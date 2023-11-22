@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
         //Dibuja el menu de inicio incluyendo el fondo, titulo, text, fichas, etc
         function drawMenuInicio() {
             let fondo = new Image();
-            fondo.src = "assets/juegoImages/sombrero.png";
+            fondo.src = "assets/juegoImages/fondo.jpg";
             fondo.onload = function() {
                 ctx.drawImage(fondo, 0, 0, canvas.width, canvas.height);
                 ctx.filter = 'none';
@@ -39,13 +39,13 @@ window.addEventListener('DOMContentLoaded', () => {
         //Carga los distintos tipos de fichas a variables para mostrarlas luego de que carguen
         function dibujarSeleccionFichas() {
             let gryffindor = new Image();
-            gryffindor.src = "assets/juegoImages/ficha-gryffindor.png";
+            gryffindor.src = "assets/juegoImages/fichaBart1.png";
             let ravenclaw = new Image();
-            ravenclaw.src = "assets/juegoImages/ficha-ravenclaw.png";
+            ravenclaw.src = "assets/juegoImages/fichaBart2.png";
             let slytherin = new Image();
-            slytherin.src = "assets/juegoImages/ficha-slytherin.png";
+            slytherin.src = "assets/juegoImages/fichaHomero1.png";
             let hufflepuff = new Image();
-            hufflepuff.src =  "assets/juegoImages/ficha-hufflepuff.png";
+            hufflepuff.src =  "assets/juegoImages/fichaHomero2.png";
             let ficha_muestra1 = new Ficha(gryffindor, "red", 110, canvas.height / 2, 26);
             let ficha_muestra2 = new Ficha(ravenclaw, "red", 110 + 30 * 2, canvas.height / 2, 26);
             let ficha_muestra3 = new Ficha(slytherin, "blue", canvas.width - 110 , canvas.height / 2, 26);
@@ -71,17 +71,17 @@ window.addEventListener('DOMContentLoaded', () => {
             ctx.font = "48px monospace";
             ctx.strokeText("Homero vs Bart", canvas.width / 2, 50);
             ctx.fillText("Homero vs Bart", canvas.width / 2, 50);
-            ctx.strokeText("En linea", canvas.width / 2, canvas.offsetTop  + 6);
-            ctx.fillText("En linea", canvas.width / 2, canvas.offsetTop +  6);
+            ctx.strokeText("En linea", canvas.width / 2, canvas.offsetTop + 5  );
+            ctx.fillText("En linea", canvas.width / 2, canvas.offsetTop + 5  );
 
             ctx.textAlign = "left";
             ctx.font = "36px monospace";
-            ctx.strokeText("Bart", 80, canvas.offsetTop + 48 * 4);
-            ctx.fillText("Bart", 80, canvas.offsetTop + 48 * 4);
+            ctx.strokeText("Jugador1", 90, canvas.offsetTop + 0 * 4);
+            ctx.fillText("Jugador1", 90, canvas.offsetTop + 0 * 4);
 
             ctx.textAlign = "right";
-            ctx.strokeText("Homero", canvas.width - 80, canvas.offsetTop + 48 * 4);
-            ctx.fillText("Homero", canvas.width - 80, canvas.offsetTop + 48 * 4);
+            ctx.strokeText("Jugador2", canvas.width - 80, canvas.offsetTop);
+            ctx.fillText("Jugador2", canvas.width - 80, canvas.offsetTop);
         }
 
         //Crea los botones que se usaran para seleccionar los distintos modos de tablero
@@ -172,13 +172,13 @@ window.addEventListener('DOMContentLoaded', () => {
         canvas.addEventListener('mousemove', mouseMove);
 
         let img_reiniciar = new Image();
-        img_reiniciar.src = "assets/juegoImages/restart2.jpg";
+        img_reiniciar.src = "assets/juegoImages/restart.jpg";
         let img_menu = new Image();
-        img_menu.src = "assets/juegoImages/home2.png";
+        img_menu.src = "assets/juegoImages/home.png";
         let fondo = new Image();
-        fondo.src = "assets/juegoImages/fondotablero.jpg";
+        fondo.src = "assets/juegoImages/fondo.jpg";
         let fondo_gameover = new Image();
-        fondo_gameover.src = "assets/juegoImages/fondotablero.jpg";
+        fondo_gameover.src = "assets/juegoImages/fondo.jpg";
         let fondo_gameover_oscuridad = new Image();
         fondo_gameover_oscuridad.src = "assets/juegoImages/fondo_oscuridad.jpg";
 
@@ -195,8 +195,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         let sizeFichas = tablero.getSizeFichas();
 
-        let jugador1 = new Jugador("Luz", ficha_j1, cantFichas / 2, ctx, "red", 0, canvas.offsetHeight, sizeFichas, "green");
-        let jugador2 = new Jugador("Oscuridad", ficha_j2, cantFichas / 2, ctx, "blue", canvas.offsetWidth - 150, canvas.offsetHeight, sizeFichas, "yellow");
+        let jugador1 = new Jugador("Jugador1", ficha_j1, cantFichas / 2, ctx, "red", 0, canvas.offsetHeight, sizeFichas, "green");
+        let jugador2 = new Jugador("Jugador2", ficha_j2, cantFichas / 2, ctx, "blue", canvas.offsetWidth - 150, canvas.offsetHeight, sizeFichas, "yellow");
 
         tablero.jugadores.push(jugador1);
         tablero.jugadores.push(jugador2);
@@ -324,7 +324,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (!tablero.juegoEnCurso || tablero.jugadorActual.tiempo === 0) {
                 clearInterval(interval_id);
                 clearCanvas();
-                if(tablero.jugadorActual.nombre === 'Luz') {
+                if(tablero.jugadorActual.nombre === 'Jugador1') {
                     ctx.drawImage(fondo_gameover, 0, 0, canvas.width, canvas.height);
                 } else {
                     ctx.drawImage(fondo_gameover_oscuridad, 0, 0, canvas.width, canvas.height);

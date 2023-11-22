@@ -203,7 +203,7 @@ main .titleCategorie h2{
 
 .titleCategorie{
     display: flex;
-    width: 80%;
+    width: 100%;
     margin-bottom: 10px;
 
 }
