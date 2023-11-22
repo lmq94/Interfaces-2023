@@ -179,8 +179,7 @@ window.addEventListener('DOMContentLoaded', () => {
         fondo.src = "assets/juegoImages/fondo.jpg";
         let fondo_gameover = new Image();
         fondo_gameover.src = "assets/juegoImages/fondo.jpg";
-        let fondo_gameover_oscuridad = new Image();
-        fondo_gameover_oscuridad.src = "assets/juegoImages/fondo.jpg";
+        
 
         let boton_menu = new Boton(canvas.width - 60, canvas.height - 60, 50, 50, "M", "#11FF11");
         let boton_reiniciar = new Boton(canvas.width - 120, canvas.height - 60, 50, 50, "R", "#FF1111");
@@ -324,11 +323,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (!tablero.juegoEnCurso || tablero.jugadorActual.tiempo === 0) {
                 clearInterval(interval_id);
                 clearCanvas();
-                if(tablero.jugadorActual.nombre === 'Jugador1') {
-                    ctx.drawImage(fondo_gameover, 0, 0, canvas.width, canvas.height);
-                } else {
-                    ctx.drawImage(fondo_gameover_oscuridad, 0, 0, canvas.width, canvas.height);
-                }
+                ctx.drawImage(fondo_gameover, 0, 0, canvas.width, canvas.height);
                 ctx.filter = 'none';
                 mostrarTextoGameOver();
 

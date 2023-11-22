@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded',function(){
         window.location.href = "index.html";
     });
 
+    let buttonRegister=document.getElementById('btn-signUp');
+    buttonRegister.addEventListener('click',function(){
+        window.location.href = "index.html";
+    })
+
 
 
 
