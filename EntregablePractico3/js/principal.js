@@ -180,7 +180,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let fondo_gameover = new Image();
         fondo_gameover.src = "assets/juegoImages/fondo.jpg";
         let fondo_gameover_oscuridad = new Image();
-        fondo_gameover_oscuridad.src = "assets/juegoImages/fondo_oscuridad.jpg";
+        fondo_gameover_oscuridad.src = "assets/juegoImages/fondo.jpg";
 
         let boton_menu = new Boton(canvas.width - 60, canvas.height - 60, 50, 50, "M", "#11FF11");
         let boton_reiniciar = new Boton(canvas.width - 120, canvas.height - 60, 50, 50, "R", "#FF1111");
