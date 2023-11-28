@@ -1,0 +1,881 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato:wght@400;700;900&family=Oswald&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Roboto:wght@100&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+}
+/* =============Variables=============*/
+*:root{
+    --font: 'Lato';
+    --yellow: #FFE901;
+    --black-btn: #02187E; /*negro azulado del boton letra y sombra*/
+    --light-blue: #2982FF;/*header y btnn*/
+    --light-blue-two: #2981FF; /*lo usa para el menu hamb*/
+    --white: #FFF;
+    --black: #000;
+    --grey: rgba(0, 0, 0, 0.39);/*placeholder input*/
+    --dark-grey: #5E5E5D;
+    --purple: #8F6AA6;
+    --background-header: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);
+    --background-section-8: linear-gradient(180deg, #F7E3D8 21.2%, #8FBEFC 81.48%);
+}
+/*================Clases generales=============*/
+
+h1, h2, h3 .body, .tx-btn {
+    font: var(--font);
+    color: var(--black);
+    font-style: normal;
+    line-height: 94.5%; /* 56.7px */
+}
+
+/*hay blanco y negro*/
+h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 60px;
+    color: var(--white);
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: 400;
+}
+/*hay blanco y negro*/
+.body{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*input*/
+.body-input{
+    color: var(--grey);
+    letter-spacing: 2.2px;
+
+}
+
+.tx-btn{
+    color: var(--black-btn);
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2.2px;
+}
+
+/*========Botones===========*/
+
+.btn{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+.comprar {
+    width: 292px;
+    height: 50px;
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: var(--yellow);
+    -webkit-text-stroke:2px;
+    /* Drop Shadow */
+    box-shadow: 4px 5px 0px 0px #02187E;
+    transition: .3s;
+}
+
+.comprar:hover{
+    /* background: var(--light-blue);
+    border: 8px solid var(--black-btn);
+ */
+    /*box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #fff;*/
+
+    box-shadow: 0 0 5px #add8e6, 0 0 20px #add8e6, 0 0 40px #add8e6;
+
+    /* transition-delay: 1s;*/
+    transform: translateX(8px) scale(1.05); 
+}
+/*==========Secciones===========*/
+header {
+    width: 100%;
+    height: 227px;
+    z-index: 1;
+    position: sticky; /*se queda fijo */
+    top: 0px;
+    transition: ease-out .8s;
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 67.91%, rgba(84, 153, 248, 0.00) 100%);
+}
+
+
+header .width-1080{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+header .width-1080 button.btn-hambur{
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    gap: -2px;
+}
+ header .width-1080 button.btn-hambur div{
+    width: 42px;
+    height: 12px;
+    filter: drop-shadow(4px 5px 0px #02187E);
+    transition: opacity 0.4s ease;
+
+}
+
+body.sticky-header header {
+    background-color: #2982FF;
+    
+  }
+
+button.btn-hambur:hover div:first-child{
+    animation: changeHamburLineOne .5s linear forwards;
+}
+
+button.btn-hambur:hover div:last-child{
+    /* transform: rotate(-45deg) translateY(4px) translateX(-6px); */
+    animation: changeHamburLineTwo .4s linear forwards;
+}
+
+@keyframes changeHamburLineOne {
+    0% {
+        transform: rotate(15deg) translateY(3px) translateX(3px);
+        filter: none;
+    }
+    50% {
+        filter: none;
+        transform: rotate(30deg) translateY(6px) translateX(6px);
+    }
+    100% {
+        filter: none;
+        transform: rotate(45deg) translateY(10px) translateX(10px);
+    }
+
+}
+
+@keyframes changeHamburLineTwo {
+    0% {
+        transform: rotate(-15deg) translateY(-3px) translateX(2px);
+        filter: none;
+    }
+    50% {
+        filter: none;
+        transform: rotate(-30deg) translateY(-6px) translateX(3px);
+    }
+    100% {
+        filter: none;
+        transform: rotate(-45deg) translateY(-8px) translateX(5px);
+    }
+
+}
+
+button.btn-hambur:hover div:nth-child(2){
+    opacity: 0;
+}
+
+
+header .width-1080 button.comprar{
+    width: 200px;
+    height: 50px;
+}
+
+.width-1080{
+    width: 1080px;
+    margin: auto;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -127px;
+    width: 100%;
+    height: 720px;
+}
+
+.section1 .logo {
+    position: absolute;
+    z-index: 10001;
+    width: 590px;
+    height: 301px;
+    top: -30px;
+    transition: ease .7s;  
+}
+
+.logo.invisible {
+    top: -250px;
+    opacity: 0;
+  }
+.section1 .sky{
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    z-index: 0;
+
+}
+.section1 .bildingLeft {
+    position: absolute;
+    width: 32%;
+    height: 720px;
+    bottom: -20px;
+    left: 0;
+    z-index: 2;
+    transition: left .4s linear;
+}
+.bildingLeft.invisible {
+    left: -100px;
+    opacity: 0;
+  }
+
+.section1 .bildingCenter {
+    position: absolute;
+    bottom: 0;
+    left: 26%;
+    width: 50%;
+    height: 240px;
+    transition: all 0.4s linear;
+}
+
+.bildingCenter.invisible {
+    bottom: -10px;
+    opacity: 0;
+  }
+
+.section1 .bildingRight {
+    position: absolute;
+    width: 26.5%;
+    height: 727px;
+    bottom: 0px;
+    right: 0;
+    transition: right .4s linear;
+    z-index: 2;
+}
+.bildingRight.invisible {
+    right: -100px;
+    opacity: 0;
+}
+
+
+.section1 .spiderBco {
+    position: absolute;
+    top: 245px;
+    left: 8%;
+    z-index: 3;
+    transform: scale(1) translateY(0);
+    transition: .5s linear;
+}
+
+.spiderBco.invisible {
+    left: -150px;
+    opacity: 0;
+  }
+
+.section1 .spiderRed {
+    position: absolute;
+    top: 245px;
+    left: -15%;
+    z-index: 10;
+    transition: .5s linear;
+}
+
+.spiderRed.invisible {
+    bottom: -350px;
+    opacity: 0;
+  }
+
+.section1 .spiderBlack {
+    position: absolute;
+    top: 195px;
+    right: -15%;
+    z-index: 10;
+    transition: .5s linear;
+}
+.spiderBlack.invisible {
+    right: -350px;
+    opacity: 0;
+  }
+
+/*=============seccion 2========================*/
+
+.section2 {
+    width: 100%;
+    position: relative;
+    height: 924.5px;
+    background-image: url(../img/section2/fondoo.png);
+    background-size: 100% 90% ;
+    background-repeat: no-repeat;
+    z-index: 2;
+    margin-top: -80px;
+}
+
+.section2 .width-1080{
+    position: relative;
+}
+
+.section2 .width-1080 h1, .section2 .width-1080 p{
+    position: absolute;
+    color: var(--white);
+    margin-top: 50px;
+}
+
+.section2 .width-1080 h1{
+
+    width: 646px;
+    top: 160px;
+    left: 0;
+}
+
+.section2 .width-1080 p{
+    width: 580px;
+    height: 154px;
+    top: 300px;
+    left: 0;
+    line-height: normal;
+}
+
+.container-img-section2{
+    position: relative;
+}
+
+.section2 .container-img-section2 .img-greenBuilding{
+    position: absolute;
+    left: 0;
+    top: 520px;
+}
+
+.section2 .container-img-section2 .img-green-elf{
+    position: absolute;
+    right: -100px;
+    top: 140px;
+    transform: scale(0.9);
+}
+
+/*================= seccion 3 =========================*/
+
+.section3 {
+    background-color: var(--white);
+    width: 100%;
+    height: 1085px;
+    margin-top: -210px; /*agregue esto para q la seccion se meta atras de la anterior ver!!!*/
+    z-index: 1;
+}
+
+.container3 {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 370px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container3 img {
+  width: 30%; /* Establece un ancho en porcentaje para cada imagen */
+  max-height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.image-wrapper {
+  width: 333px;
+}
+
+.card{
+    opacity: 0;
+    position: relative;
+    bottom: -250px;
+  
+}
+.efecto-card1-remove{
+    opacity: 0;
+    bottom: -250px;
+    transition: .4s ease;
+}
+.efecto-card2-remove{
+    opacity: 0;
+    bottom: -250px;
+    transition: .8s ease;
+}
+.efecto-card3-remove{
+    opacity: 0;
+    bottom: -250px;
+    transition: 1.2s ease;
+}
+
+
+.efecto-card1{
+    opacity: 1;
+    bottom:  0; 
+    transition: ease .4s;
+
+}
+
+.efecto-card2{
+    opacity: 1;
+    bottom:  0; 
+    transition: ease .8s;
+}
+
+.efecto-card3{
+    opacity: 1;
+    bottom:  0; 
+    transition: ease 1.2s;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.translate-element {
+    transition: transform 0.5s ease; 
+  }
+  
+  .translate-element.active {
+    transform: translate(0, 0); /
+  }
+
+/*=========section 4============*/
+.section4 {
+    width: 100%;
+    height: 566px;
+    margin-top: -60px;
+    background-image: url(../img/section4/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.section4 .width-1080{
+    position: relative;
+}
+
+.section4 .section-4-card1{
+    position: absolute;
+    top: -155px;
+    left: -45px;
+    width: 546.108px;
+    height: 326.509px;
+    flex-shrink: 0;
+}
+
+.section4 .section-4-card2{
+    position: absolute;
+    left: -55px;
+    top: -20px;
+    width: 543.218px;
+    height: 325.787px;
+    flex-shrink: 0;
+}
+
+.section4 .section-4-card3{
+    position: absolute;
+    left:0;
+    left: -25px;
+    top: 175px;
+    width: 546.108px;
+    height: 326.509px;
+    flex-shrink: 0;
+}
+
+.section4 .section-4-card1:hover, 
+.section4 .section-4-card2:hover,
+.section4 .section-4-card3:hover{
+    transform: skewY(7deg);
+    transition: all .5s ease-in-out;
+}
+
+/*========section 5===================*/
+.section5 {
+    height: 980px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -90px;
+}
+
+.section5 .width-1080 h1{
+    width: 646px;
+    color: var(--white);
+    margin-top: -250px;
+    margin-bottom: 50px;
+}
+
+.parallax5 {
+    position: relative;
+    
+
+}
+
+.parallax5 img {
+    position: absolute;
+    transition: transform 0.3s ease-out;
+}
+
+.parallax5 .girl {
+    left:100px;
+    top: -86px;
+    transform: rotate(-5.483deg);
+}
+
+.parallax5 .panther {
+    width: 333px;
+    left: 511px;
+    top: -118px; /*estaba en -168, lo baje un pco xq se iba de pantalla no se le ve la cabeza, tal vez toque algo q lo desacomodo antes lo veia bien*/
+    transform: rotate(4deg);
+    /* transform: rotate(14deg); */
+}
+
+.parallax5 .hulk {
+    right: -50px;
+    top: 117px;
+}
+
+/*======== section 6 ===================*/
+.section6 {
+    height: 1600px; 
+    width: 100%;
+    background-image: url(../img/section6/fondo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    margin-top: -200px;
+    padding-top: 300px;
+    z-index: -1;
+}
+.section6  h1{
+    
+    padding-top: 100px;
+    padding-left: 90px;
+}
+.section6 img {
+    width: 552px;
+    height: 302px;
+}
+.section6 .width-1080{
+    padding-top: 130px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+     
+}
+
+.section6 .section6-colImg{
+    /* flex: 1; */
+    width: 552px;
+    position: relative;
+}
+.section6 .section6-colText{
+    width: 475px;
+    
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+
+
+/*======para ocultar la barra de scroll========*/
+.section6-colText::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.section6-colText::-webkit-scrollbar-thumb {
+    background-color: #FFF;
+}
+/*=============================================*/
+ 
+#title-1{
+    opacity: 1;
+}
+#title-1, #title-2, #title-3, #title-4{
+    transition: ease-in-out .3s;
+}
+
+#text-1{
+    opacity: 1;
+}
+#text-1, #text-2, #text-3, #text-4{
+    transition: ease-in-out .3s;
+}
+#image1{
+      opacity: 1;
+}
+
+#image1, #image2, #image3, #image4{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: ease-in-out 1.5s;
+    
+}
+
+
+/*======== section Comprar ===================*/
+
+.sectionComprar {
+    margin-top: -350px;
+    height: 248px;
+}
+
+.sectionComprar h1{
+    color: var(--white);
+}
+
+/* .sectionComprar .comprar:hover {
+    background-color: #2982FF;
+} */
+
+/*======== section7 ===================*/
+
+.section7 {
+    padding-bottom: 40px;
+    height: 880px;
+    background-image:  url(../img/section7/trapecioBlanco.png);
+    position: relative;
+}
+
+.section7 .width-1080 {
+    position: relative;
+}
+
+.section7 .width-1080 > img {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top:180px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.spiderWhite {
+    left: 0px;
+}
+
+.spiderRed {
+    left: 30%;
+  }
+
+.spiderBlack {
+    right:0px;
+}
+
+.section7 .popup {
+    display: none;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 832px;
+    background-color: var(--black);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popup-text {
+    width: 56%;
+    color: var(--white);
+}
+
+.section7 .show {
+    display: flex;
+}
+
+.section7 .popup > img {
+    width: 284px;
+    height: 717px;
+    margin-left: 0px; /* 57(alto popup - alto imagen)/2 */
+}
+
+.section7 .popup .close {
+    position: absolute;
+    width: 89px;
+    top: -286px;
+    right: 28px;
+    cursor: pointer;
+}
+
+
+/*======== section8 ===================*/
+
+.section8 {
+   
+    height: 1296px;
+    background: linear-gradient(180deg,  #8FBEFC 21.2%, #F7E3D8  81.48%);
+    position: relative;
+}
+
+.section8 .img-section8-building{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#sp_1 {
+    transform: scale(1.5);
+    position: absolute;
+    bottom: 3%;
+    left: 24%;
+    width: 40px;
+    height: 76px;
+    background-image: url(../img/spritesheet/red1.png);
+    background-repeat: repeat-x;
+    animation: climb 2.5s steps(7) infinite;
+}
+
+@keyframes climb {
+    0% { background-position:0 }
+    100% { background-position:-280px }
+  }
+
+
+#sp_2 {
+    transform: scale(1.5);
+    position: absolute;
+    bottom: 18%;
+    right: 11%;
+    width: 40px;
+    height: 76px;
+    background-image: url(../img/spritesheet/blue1.png);
+    background-repeat: repeat-x;
+    animation: climb 2.5s steps(7) infinite;
+}
+
+@keyframes climb {
+    0% { background-position:0 }
+    100% { background-position:-280px }
+  }
+
+  #sp_3 {
+    position: absolute;
+    transform: scale(.3);
+    bottom: 7%;
+    left: 37%;    
+    width: 230px;
+    height: 217px;
+    background-image: url(../img/spritesheet/red3.png);
+    background-repeat: repeat-x;
+    animation: walk .8s steps(5) infinite;
+}
+
+@keyframes walk {
+    0% { background-position:0 }
+    100% { background-position:-1150px }
+  }
+
+
+.section8 .width-1080{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section8 h1{
+    width: 816px;
+    text-align: center;
+    margin-top: 152px;
+
+}
+
+.section8 input, .section8 button{
+    margin-top: 45px;
+    width: 562px;
+    height: 100px;
+}
+
+.section8 .width-1080 p{
+    width: 578px;
+    height: 95px;
+    margin-top: 40px;
+    margin-left: -80px;
+
+}
+
+.section8 .width-1080 img{
+    width: 231px;
+    height: 145px;
+    margin: 30px 0 0 -330px
+
+}
+
+.container-btn-setion8{
+    display: flex;
+}
+
+.container-btn-setion8 input{
+    border-radius: 50px 0px 0px 50px;
+    border-top: 9px solid #2982FF;
+    border-bottom: 9px solid #2982FF;
+    border-left: 9px solid #2982FF;
+    background: #FFF;
+/* Drop Shadow */
+box-shadow: 4px 5px 0px 0px #02187E;
+}
+
+.container-btn-setion8 input::placeholder{
+    color: var(--grey);
+    letter-spacing: 2.2px;
+    padding-left: 50px;
+}
+
+.container-btn-setion8 button{
+    width: 218px;
+    margin-left: -10px;
+    border-radius: 0px 50px 50px 0px;
+
+}
+
+/*=====footer========*/
+footer {
+    height: 678px;
+    background-color: var(--dark-grey);
+}
+
+footer .body  {
+    width: 820px;
+    height: 361px;
+    margin-top: 38px;
+    color: var(--white);
+    letter-spacing: 2.2px;
+}
+
+.body span {
+    text-decoration: underline;
+}
+
+footer .body span {
+    display: block;
+    margin-top: 20px;
+}
+
+footer img{
+    width: 100%;
+    height: 80px;
+}
+
+footer .width-1080 img{
+   margin-top: 120px;
+    width: 212px;
+    height: 41px;
+}
+
